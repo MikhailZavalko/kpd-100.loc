@@ -1,0 +1,26 @@
+name = Основная тема сайта
+description = Основная тема сайта
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = fonts/fonts.css
+stylesheets[all][] = plugins/slick/slick.css
+stylesheets[all][] = plugins/swiper/css/swiper.min.css
+stylesheets[all][] = plugins/fancybox/jquery.fancybox.min.css
+stylesheets[all][] = css/main.less
+
+scripts[] = plugins/mro.ajax.js
+scripts[] = plugins/jquery-validation/jquery.validate.min.js
+#scripts[] = plugins/jquery-validation/localization/messages_ru.min.js
+scripts[] = plugins/fancybox/jquery.fancybox.min.js
+scripts[] = plugins/slick/slick.min.js
+scripts[] = plugins/swiper/js/swiper.min.js
+scripts[] = plugins/input-mask/jquery.inputmask.min.js
+scripts[] = plugins/midnight/midnight.jquery.min.js
+scripts[] = plugins/Parallax-ImageScroll/jquery.imageScroll.min.js
+scripts[] = js/main.js
+
+regions[content] = Содержимое
+
+
