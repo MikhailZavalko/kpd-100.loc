@@ -7,6 +7,8 @@ yarn-error.log*
 lerna-debug.log*
 
 #dependencies
+kpd-100.loc-access_log
+kpd-100.loc-error_log
 /node-modules
 /.vscode
 package-lock.json
