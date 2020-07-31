@@ -69,45 +69,10 @@
 		}
 		$(window).resize(calcPos);
 	});
-}(jQuery));$(function() {
-	if (window.ymaps) {
-		ymaps.ready(function () {
-			$('.widget-type-map[data-center]').each(function () {
-				var self = $(this);
-				var id = self.attr('id');
-				var data = false;
-				if (self.find('[type=hidden]').val()) {
-					data = typeof JSON.parse == 'function' ? JSON.parse(self.find('[type=hidden]').val()) : eval(self.find('[type=hidden]').val());
-				}
-				var params = {
-					type: self.data('type') || 'yandex#map',
-					center: self.data('center').split(',').map(function (e) {
-						return $.trim(e)
-					}),
-					zoom: self.data('zoom') || 9,
-					controls: self.data('controls') ? self.data('controls').split(',').map(function (e) {
-						return $.trim(e)
-					}) : []
-				};
-				var myMap = new ymaps.Map(id, params);
-				myMap.behaviors.disable('scrollZoom');
-				if (data) {
-					for (var i in data) {
-						var myPlacemark = new ymaps.Placemark(data[i].point.split(',').map(function (e) {
-							return $.trim(e);
-						}), {
-							iconContent: $('<div>').html(data[i].iconContent).text(),
-							balloonContent: $('<div>').html(data[i].balloonContent).html()
-						}, {
-							preset: data[i].preset
-						});
-						myMap.geoObjects.add(myPlacemark);
-					}
-				}
-			});
-		});
-	}
-});
+}
+(jQuery));
+
+
 $(function() {
 	$('.up_button').click(function () {
 		var up_speed = $(this).data('speed')
@@ -116,6 +81,7 @@ $(function() {
 		}, up_speed);
 	});
 });
+
 $(function () {
 	$(document).click(function (event) {
 		$('.contacts-block').each(function() {
@@ -143,10 +109,10 @@ $(function () {
 
 	$('.contacts-block').each(function() {
 		var $block = $(this),
-			allClasses = $block.attr("class").split(" "),
-			mainClass = allClasses[0],
-            mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
-			styles = document.styleSheets;
+		allClasses = $block.attr("class").split(" "),
+		mainClass = allClasses[0],
+		mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
+		styles = document.styleSheets;
 
 		for(var i = 0; i < styles.length; i++) {
 			if (styles[i].href && styles[i].href.indexOf("styles.css") !== -1) {
@@ -185,6 +151,7 @@ $(function () {
 		});
 	});
 });
+
 $(function () {
 	$(document).click(function (event) {
 		$('.contacts-block').each(function() {
@@ -212,10 +179,10 @@ $(function () {
 
 	$('.contacts-block').each(function() {
 		var $block = $(this),
-			allClasses = $block.attr("class").split(" "),
-			mainClass = allClasses[0],
-            mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
-			styles = document.styleSheets;
+		allClasses = $block.attr("class").split(" "),
+		mainClass = allClasses[0],
+		mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
+		styles = document.styleSheets;
 
 		for(var i = 0; i < styles.length; i++) {
 			if (styles[i].href && styles[i].href.indexOf("styles.css") !== -1) {
@@ -254,744 +221,9 @@ $(function () {
 		});
 	});
 });
-;(function(window, document) {
-    if (!window.photoSwipeSettings) {
-        window.photoSwipeSettings = {};
-    }
 
-    var psSettings = window.photoSwipeSettings;
 
-    function initPhotoSwipeFunc(settings) {
-        if (!settings.preloadImages) {
-            settings.preloadImages = false;
-        }
 
-        var settingsKeys = Object.keys(psSettings);
-
-        if (settingsKeys.length) {
-            settingsKeys.forEach(function(key) {
-                if (key !== 'hashData') {
-                    psSettings[key].push(settings[key]);
-                }
-            });
-        } else {
-            Object.keys(settings).forEach(function(key) {
-                psSettings[key] = [];
-
-                psSettings[key].push(settings[key]);
-            });
-        }
-
-        var galleryIteration = 0;
-
-        psSettings.gallery.forEach(function(str){
-            if (str === settings.gallery) {
-                galleryIteration++;
-            }
-            var index = psSettings.gallery.indexOf(settings.gallery);
-
-            if (galleryIteration > 1) {
-                settingsKeys.forEach(function(key) {
-                    if (key !== 'hashData') {
-                        psSettings[key].splice(index, 1);
-                    }
-                });
-                galleryIteration = 0;
-            }
-        });
-
-        if (!psSettings.hashData) {
-            psSettings.hashData = photoswipeParseHash();
-        }
-
-        var hashData = psSettings.hashData;
-        var hashDataKeys = Object.keys(hashData);
-
-        if (hashDataKeys.length) {
-            settings.preloadImages = true;
-        }
-
-        var galleryElements = document.querySelectorAll(psSettings.gallery.join(','));
-        var galleryLength = galleryElements.length;
-
-        var pswpHTML = '<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"><div class="pswp__top-bar"><div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>';
-        var pswpHTMLEnd = '<div class="pswp__preloader"><div class="pswp__preloader__icn"><div class="pswp__preloader__cut"><div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button><button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class="pswp__caption"><div class="pswp__caption__center"></div></div></div></div></div>';
-        var pswpShare = '', pswpFullscreen = '', pswpZoom = '', curGallery;
-
-        for(var i = 0; i < galleryLength; i++) {
-            curGallery = galleryElements[i];
-
-            if (curGallery.getAttribute('data-popup-share') === '1') {
-                pswpShare = '<button class="pswp__button pswp__button--share" title="Share"></button>'
-            }
-            if (curGallery.getAttribute('data-popup-fullscreen') === '1') {
-                pswpFullscreen = '<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>';
-            }
-            if (curGallery.getAttribute('data-popup-zoom') === '1') {
-                pswpZoom = '<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>';
-            }
-
-            curGallery.setAttribute('data-pswp-uid', i+1);
-            curGallery.dataGID = i+1;
-
-            if (settings.preloadImages) {
-                parseGalleryImages(curGallery);
-            } else {
-                parseGalleryThumbs(curGallery);
-
-                if (hashData.pid && hashData.gid && hashData.gid === curGallery.dataGID) {
-                    openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
-                }
-            }
-        }
-
-        var pswpOverlay = document.querySelectorAll('.pswp');
-
-        if (pswpOverlay.length === 0) {
-            pswpHTML = pswpHTML + pswpShare + pswpFullscreen + pswpZoom + pswpHTMLEnd;
-
-            var pswpContainer = document.createElement('div');
-            pswpContainer.innerHTML = pswpHTML;
-
-            document.body.appendChild(pswpContainer);
-        }
-
-        function parseGalleryImages(gallery){
-            var images = gallery.querySelectorAll(settings.item + ' img');
-            var imagesLen = images.length;
-            var loadedArr = [];
-
-            for (var ind = 0; ind < imagesLen; ind++) {
-                setDataSize(images[ind]);
-            }
-            function setDataSize(img) {
-                var tempImg = new Image();
-
-                var link = closest(img, function(el) {
-                    return (el.tagName && el.tagName === 'A');
-                });
-
-				if(link){
-                    tempImg.src = link.getAttribute('href');
-				}
-
-                if (!link) {return false;}
-
-
-                tempImg.addEventListener('load', function() {
-                    link.setAttribute('data-size', tempImg.naturalWidth + 'x' + tempImg.naturalHeight);
-                    tempImg = null;
-
-                    loadedArr.push('loaded');
-
-                    if (loadedArr.length === imagesLen) {
-                        parseGalleryThumbs(gallery);
-
-                        if (hashData.pid && hashData.gid && hashData.gid === gallery.dataGID) {
-                            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
-                        }
-                    }
-                });
-            }
-        }
-        function parseGalleryThumbs(gallery) {
-            var thumbs = gallery.querySelectorAll(settings.item);
-            var thumbsLen = thumbs.length;
-            var items = [];
-            var item, link, image, title, desc, size, obj;
-
-            for (var i = 0; i < thumbsLen; i++) {
-                item = thumbs[i];
-
-                item.dataPSIndex = i;
-                item.addEventListener('click', onThumbsClick);
-
-                image = item.querySelector('img');
-                link = item.querySelector('a[data-size]');
-
-                title = link.getAttribute('data-title');
-                desc = item.querySelector(settings.itemDesc);
-
-                size = link.getAttribute('data-size').split('x');
-
-                obj = {
-                    src: link.getAttribute('href'),
-                    w: parseInt(size[0], 10),
-                    h: parseInt(size[1], 10)
-                };
-
-                if (title) {
-                    obj.title = title;
-                }
-
-                if (desc && desc.innerHTML) {
-                    obj.title += '<br /><small>' + desc.innerHTML + '</small>';
-                }
-
-                if (link.children.length > 0) {
-                    obj.msrc = image.getAttribute('src');
-                }
-
-                obj.el = item;
-
-                items.push(obj);
-            }
-
-            return items;
-        }
-        function onThumbsClick(e) {
-            e = e || window.event;
-
-            e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-            var eTarget = e.target || e.srcElement;
-
-            var clickedItem = closest(eTarget, function(el) {
-                return ('dataPSIndex' in el);
-            });
-
-            var clickedGallery = closest(clickedItem, function(el) {
-                return el.getAttribute('data-pswp-uid');
-            });
-
-            var index = clickedItem.dataPSIndex;
-
-            openPhotoSwipe(index, clickedGallery);
-
-            return false;
-        }
-        function closest(el, fn) {
-            return el && (fn(el) ? el : closest(el.parentNode, fn));
-        }
-        function openPhotoSwipe(index, gallery, disableAnimation, fromURL) {
-            var pswpElement = document.querySelectorAll('.pswp')[0];
-            if (!gallery) {
-                return false;
-            }
-            var items = parseGalleryThumbs(gallery);
-            var options = {
-                galleryUID: gallery.getAttribute('data-pswp-uid'),
-                getThumbBoundsFn: function(index) {
-                    var thumbnail = items[index].el.getElementsByTagName('img')[0];
-                    var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
-                    var rect = thumbnail.getBoundingClientRect();
-
-                    return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-                }
-            };
-            if (fromURL) {
-                if(options['galleryPIDs']) {
-                    for (var j = 0; j < items.length; j++) {
-                        if (items[j].pid === index) {
-                            options.index = j;
-                            break;
-                        }
-                    }
-                } else {
-                    options.index = parseInt(index, 10) - 1;
-                }
-            } else {
-                options.index = parseInt(index, 10);
-            }
-            if (isNaN(options.index) ) {
-                return;
-            }
-            if (disableAnimation) {
-                options.showAnimationDuration = 0;
-                options.hideAnimationDuration = 0;
-            }
-            var pswpGallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
-            pswpGallery.init();
-            pswpGallery.listen('close', function() {
-                setTimeout(function(){
-                    pswpElement.classList.remove('pswp--open');
-                }, 500);
-            });
-        }
-        function photoswipeParseHash() {
-            var hash = location.hash.substring(1), params = {};
-
-            if (hash.length < 5) {
-                return params;
-            }
-
-            var vars = hash.split('&'), varsL = vars.length, pair;
-
-            for (var i = 0; i < varsL; i++) {
-                if (!vars[i]) {continue;}
-
-                pair = vars[i].split('=');
-
-                if (pair.length < 2) {continue;}
-
-                params[pair[0]] = pair[1];
-            }
-
-            if (params.gid) {
-                params.gid = parseInt(params.gid, 10);
-            }
-
-            return params;
-        }
-    }
-
-    if (!window.initPhotoSwipeFunc) {
-        window.initPhotoSwipeFunc = initPhotoSwipeFunc;
-    }
-}(window, document));
-
-$(function() {
-
-	var $win = $(window);
-
-	var debounce = (function () {
-		return function (fn, time) {
-			var timer, func;
-			func = function() {
-				var args = [].slice.call(arguments, 0);
-				window.clearTimeout(timer);
-				timer = window.setTimeout(function () {
-					window.requestAnimationFrame && window.requestAnimationFrame(function() {
-						fn.apply(null, args);
-					}) || fn.apply(null, args);
-				}, time)
-			};
-			return func;
-		}
-	}());
-
-	var throttle = (function() {
-		return function (fn, threshhold, scope) {
-			threshhold || (threshhold = 250);
-			var last,
-				deferTimer,
-				func;
-			func = function () {
-				var context = scope || this;
-				var now = +new Date,
-					args = arguments;
-				if (last && now < last + threshhold) {
-					// hold on to it
-					clearTimeout(deferTimer);
-					deferTimer = setTimeout(function () {
-						last = now;
-						fn.apply(context, args);
-					}, threshhold);
-				} else {
-					last = now;
-					fn.apply(context, args);
-				}
-			};
-			return func;
-		}
-	}());
-
-	var psSettings = {
-		gallery: '.blocklist .body',
-		item: '.image',
-		itemDesc: '.text',
-		preloadImages: true
-	};
-
-	$('.blocklist').each(function() {
-		var $blocklist = $(this),
-			$items = $blocklist.find('.item-outer'),
-			$list = $blocklist.find('.list'),
-			$body = $blocklist.find('.body'),
-			$controls = $blocklist.find('.controls'),
-			$pagers = $blocklist.find('.bx-pager-wrap'),
-			//$auto_controls = $blocklist.find('.auto_controls'),
-			options = {},
-			count,
-			col_arr, pager_arr, controls_arr,
-			bxslider,
-			auto_controls_arr,
-			containerWidth,
-			isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-			media_type,
-			id = $blocklist.attr('data-layer_id') ? $blocklist.attr('data-layer_id') : $blocklist.attr('item_id'),
-			slider_arr = $blocklist.attr('data-slider').split(","),
-			swipe_arr = $blocklist.attr('data-swipe').split(",");
-
-		// Equal height
-
-		var equalizerSelector = $blocklist.attr('data-setting-vertical_aligner'),
-			isItemFlex;
-
-		function columnConform() {
-			var rowDivs = [],
-				currentTallest = 0,
-				currentRowStart = 0;
-
-			isItemFlex = $items.find('.item').css('display') == 'flex';
-
-			$items.each(function(index) {
-				// Refresh
-				$(this).find(equalizerSelector).css('min-height', '');
-				$(this).find(equalizerSelector).css('margin-top', '');
-
-				var $itemOuter = $(this),
-					$item = $itemOuter.find('.item'),
-					itemHeight = sumChildrenHeight($item);
-
-				$item.data("originalHeight", itemHeight);
-
-				if (currentRowStart != $itemOuter.position().top) {
-					if (rowDivs.length > 1) {
-						for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-							setConformingHeight(rowDivs[currentDiv], currentTallest);
-						}
-					}
-
-					// set the variables for the new row
-					rowDivs = [];
-					currentRowStart = $itemOuter.position().top;
-					currentTallest = itemHeight;
-					rowDivs.push($item);
-
-				} else {
-					rowDivs.push($item);
-
-					currentTallest = (currentTallest < itemHeight) ? (itemHeight) : (currentTallest);
-				}
-
-			});
-
-			// do the last row
-			if (rowDivs.length > 1) {
-				for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-					setConformingHeight(rowDivs[currentDiv], currentTallest);
-				}
-			}
-		}
-
-		function setConformingHeight(el, newHeight) {
-			var $equalizer = el.find(equalizerSelector);
-
-			if (!$equalizer.length) return;
-
-			var $beforeEqualizer = $equalizer.prev(),
-				elHeight = (el.data("originalHeight") == undefined) ? (sumChildrenHeight(el)) : (el.data("originalHeight")),
-				differHeight = newHeight - elHeight;
-
-			if (differHeight == 0) return;
-
-			var equalizerMargin = parseInt(document.defaultView.getComputedStyle($equalizer[0], "").marginTop),
-				beforeEqualizerMargin = !isItemFlex && $beforeEqualizer.length ? parseInt(document.defaultView.getComputedStyle($beforeEqualizer[0], "").marginBottom) : 0,
-				newMargin = equalizerMargin>beforeEqualizerMargin ? equalizerMargin : beforeEqualizerMargin;
-
-			$equalizer.css('margin-top', differHeight+newMargin);
-		}
-
-		function sumChildrenHeight(el) {
-			var sum = 0;
-			el.children().each(function() {
-				sum += $(this).outerHeight();
-			});
-			return sum;
-		}
-
-		if (equalizerSelector && equalizerSelector !== "none") {
-			setTimeout(function () {
-				columnConform();
-			}, 0);
-
-			$win.on('resize', debounce(columnConform, 300));
-		}
-
-		if (slider_arr.indexOf('1')>-1 && $.fn.bxSlider) {
-
-			options.pagerSelector= $blocklist.attr('data-setting-pager_selector');
-			options.prevSelector = $blocklist.attr('data-setting-prev_selector');
-			options.nextSelector = $blocklist.attr('data-setting-next_selector');
-			options.prevText = $blocklist.attr('data-setting-prev_text') || '';
-			options.nextText = $blocklist.attr('data-setting-next_text') || '';
-			options.auto = !!parseInt($blocklist.attr('data-setting-auto'));
-			options.controls = !!parseInt($blocklist.attr('data-setting-controls'));
-			options.pager = !!parseInt($blocklist.attr('data-setting-pager').split(',')[0]);
-			options.pause = parseInt($blocklist.attr('data-setting-pause'), 10) || 4000;
-			options.useCSS = isMobile;
-			options.infiniteLoop = true;
-			options.adaptiveHeight = false;
-			options.mode = $blocklist.attr('data-setting-mode') || 'horizontal';
-			options.touchEnabled = options.mode === 'horizontal';
-			options.slideMargin = 0;
-			options.maxSlides = parseInt($blocklist.attr('data-setting-count').split(',')[0], 10) || 1;
-			options.minSlides = options.mode === 'horizontal' ? 1 : options.maxSlides;
-			options.moveSlides = $blocklist.attr('data-setting-move') || 0;
-			options.autoControlsSelector = $blocklist.attr('data-setting-auto_controls_selector');
-			options.autoControls =  !!parseInt($blocklist.attr('data-setting-auto_controls').split(',')[0]);
-			options.autoControlsCombine =  !!parseInt($blocklist.attr('data-setting-autoControlsCombine'));
-			options.autoHover = true;
-
-			col_arr = $blocklist.attr('data-setting-columns').split(",");
-			pager_arr = $blocklist.attr('data-setting-pager').split(",");
-			controls_arr = $blocklist.attr('data-setting-controls').split(",");
-			auto_controls_arr = $blocklist.attr('data-setting-auto_controls').split(",");
-
-			if (!options.autoControls && options.auto) {
-				options.onSlideAfter = function() {
-					bxslider.startAuto();
-				}
-			}
-
-			$items.removeClass('hidden');
-			if ($list.parent().hasClass('bx-viewport')) {
-				$list.unwrap();
-				$list.unwrap();
-			}
-
-			function init(force) {
-				var setting_columns,
-					isJustify, space_between,
-					body_width = $('body').width(),
-					mediaList = ["screen", "tablet_landscape", "tablet_portrait", "mobile_landscape", "mobile_portrait"],
-					slider_arr = $blocklist.attr('data-slider').split(",");
-
-
-				if (body_width >= 961) {
-					media_type = "screen";
-				} else if (body_width <= 960 && body_width >= 769) {
-					media_type = "tablet_landscape";
-				} else if (body_width <= 768 && body_width >= 641) {
-					media_type = "tablet_portrait";
-				} else if (body_width <= 640 && body_width >= 481) {
-					media_type = "mobile_landscape";
-				} else if (body_width <= 480) {
-					media_type = "mobile_portrait";
-				}
-				var media_ind = mediaList.indexOf(media_type);
-				var newContainerWidth = $blocklist.width(), itemHeight, viewportHeight;
-
-				if (!$blocklist.is(':visible')) {
-					if (bxslider) {
-						bxslider.destroySlider();
-					}
-					return;
-				}
-				if (force!=='force' && containerWidth && containerWidth === newContainerWidth) {
-					return;
-				}
-				containerWidth = newContainerWidth;
-
-				if (bxslider) {
-					bxslider.destroySlider();
-				}
-
-				count = parseInt($blocklist.attr('data-setting-count').split(',')[media_ind], 10);
-				isJustify = $body.css('justify-content') === "space-between";
-
-				$controls.css("pointer-events","none");
-				$controls.find('.prev').css("pointer-events","auto");
-				$controls.find('.next').css("pointer-events","auto");
-
-				$list.width('auto');
-
-				$items
-					.attr('style', '')
-					.slice(1).addClass('hidden').end()
-					.width(options.slideWidth = $items.width())
-					.removeClass('hidden');
-
-				if (pager_arr.length > 1) {
-					options.pager = !!parseInt(pager_arr[media_ind]);
-				}
-				if (controls_arr.length > 1) {
-					options.controls = !!parseInt(controls_arr[media_ind]);
-				}
-				if (auto_controls_arr.length > 1) {
-					options.autoControls = !!parseInt(auto_controls_arr[media_ind]);
-				}
-
-				$(options.pagerSelector).css({"display": options.pager == true ? "flex" : "none"});
-				$blocklist.find(".controls").css({"display": options.controls == true ? "flex" : "none"});
-
-				if (options.mode === 'vertical') {
-					itemHeight = Math.max.apply(Math, $items.map(function() {
-						return $(this).height()
-					}).get());
-					$items.css('min-height', itemHeight);
-					viewportHeight = itemHeight * count;
-					options.maxSlides = options.minSlides = count;
-				} else {
-					setting_columns = col_arr[media_ind] == "auto" ? false : parseInt(col_arr[media_ind]);
-					if (setting_columns) {
-						count = setting_columns;
-					}
-					options.maxSlides = Math.min(count, Math.ceil($items.parent().width() / $items.width()));
-				}
-
-				if (isJustify) {
-					if (options.maxSlides > 1) {
-						space_between = Math.floor(($body.width() - $items.width() * options.maxSlides)/ (options.maxSlides-1));
-						space_between = space_between < 0 ? 0 : space_between;
-					} else {
-						space_between = 0;
-					}
-					options.slideMargin = space_between;
-				}
-				if ($items.length > options.maxSlides && slider_arr[media_ind] == 1) {
-					$list.css({'justify-content': 'flex-start'});
-					if (bxslider) {
-						bxslider.reloadSlider(options);
-					} else {
-						$list.data('bxslider', (bxslider = $list.bxSlider(options)));
-					}
-					if(options.pager){
-						$pagers.css('display', 'flex');
-					}
-				} else {
-					if(swipe_arr[media_ind]!=1){
-                        $list.css({'justify-content': isJustify ? 'space-between' : 'inherit', 'flex-wrap': 'wrap'});
-                        if($list.width()/count < $items.width()) {
-                            $items.css('width', $items.width()-1);
-                        } else {
-                            $items.css('width', $items.width());
-                        }
-					} else {
-						$list.css({'flex-wrap': 'nowrap'});
-					}
-					$pagers.hide();
-					$controls.hide();
-				}
-
-				/*if (parseInt(slider_arr[media_ind]) === 0 || parseInt(swipe_arr[media_ind]) === 0) {
-					$items.css('width', '');
-				}*/
-
-				if (viewportHeight && slider_arr[media_ind] == 1) {
-					$list.parent().css('min-height', viewportHeight);
-				}
-				if (options.mode === 'horizontal') {
-					var align = {};
-					switch ($body.css('justify-content')) {
-						case 'flex-end':
-							align['margin-left'] = 'auto';
-							align['margin-right'] = '0px';
-							break;
-						case 'center':
-							align['margin-left'] = 'auto';
-							align['margin-right'] = 'auto';
-							break;
-						default:
-							align['margin-left'] = '0px';
-							align['margin-right'] = 'auto';
-					}
-					$blocklist.find('.bx-wrapper').css(align);
-				}
-
-				$blocklist.wm_img_convert();
-			}
-
-			$win.on('resize', debounce(init, 300));
-			$win.on('load', function(){
-				init('force');
-				$win.trigger('resize');
-			});
-
-			init();
-		} else {
-			$pagers.hide();
-			$controls.hide();
-		}
-
-		$win.on('resize', debounce(swipeScrollInit, 300));
-		swipeScrollInit();
-
-		function swipeScrollInit() {
-			var $shadowLeft = $blocklist.find(".swipe-shadow-left");
-			var $shadowRight = $blocklist.find(".swipe-shadow-right");
-			if ($list.css("overflow-x") == "auto") {
-				var scroll_width = $list.get(0).scrollWidth;
-				var view_width = $list.width();
-				$shadowLeft.css("pointer-events","none");
-				$shadowRight.css("pointer-events","none");
-
-				$list.off('scroll');
-				$list.on('scroll', throttle(swipeScrollCheack, 200));
-
-				swipeScrollCheack();
-
-				function swipeScrollCheack() {
-					var scroll_left = $list.scrollLeft();
-
-					if (scroll_left > 0) {
-						$shadowLeft.show();
-					} else {
-						$shadowLeft.hide();
-					}
-
-					if (scroll_left + view_width >= scroll_width - 1) {
-						$shadowRight.hide();
-					} else {
-						$shadowRight.show();
-					}
-				}
-			} else {
-				$shadowLeft.hide();
-				$shadowRight.hide();
-			}
-		}
-		if($blocklist.attr('data_photo_swipe') == 1){
-            //$('.pswp').appendTo('body');
-            initPhotoSwipeFunc(psSettings);
-			$win.on('resize', function() {
-                initPhotoSwipeFunc(psSettings);
-            });
-		}
-
-        $(document).on('click', '.shop2-product-btn2', function(e) {
-
-            var $this = $(this),
-                $form = $this.closest('form'),
-                form = $form.get(0),
-                adds = $form.find('.additional-cart-params'),
-                len = adds.length,
-                i, el,
-                a4 = form.amount.value,
-                kind_id = form.kind_id.value;
-
-            e.preventDefault();
-
-            if (len) {
-                a4 = {
-                    amount: a4
-                };
-
-                for (i = 0; i < len; i += 1) {
-                    el = adds[i];
-                    if (el.value) {
-                        a4[el.name] = el.value;
-                    }
-                }
-            }
-
-            shop2.cart.add(kind_id, a4, function(d) {
-
-                $('#shop2-cart-preview').replaceWith(d.data);
-
-                if (d.errstr) {
-                    shop2.msg(d.errstr, $this);
-                } else {
-                    shop2.msg(window._s3Lang.JS_ADDED, $this);
-                }
-
-                if (d.panel) {
-                    $('#shop2-panel').replaceWith(d.panel);
-                }
-            });
-
-        });
-
-	});
-
-	var blockListBody = document.querySelectorAll('.blocklist .body-outer');
-
-	s3ContentColumns(blockListBody, {
-		body: '.list',
-		items: '.item-outer'
-	});
-});
 // s3ContentColumns v1.0.0
 (function(window, document, undefined) {
 	var vendors = ['ms', 'moz', 'webkit', 'o'], vendorsLength = 4;
@@ -1383,6 +615,7 @@ $(function() {
 			return wrap;
 		}
 	};
+
 	function s3ContentColumnsPlugin(element, method) {
 		if (!element) {return false;}
 		if (pluginMethods[method]) {
@@ -1404,21 +637,22 @@ $(function() {
 		window.s3ContentColumns = s3ContentColumnsPlugin;
 	}
 }(window, document));
+
 /*
  *  wmS3Menu v1.0.0
  *  K.I. 433
  */
-;(function ($, window, document, undefined ) {
-	var pluginName = 'wmS3Menu',
-		defaults = {
-			screenButton: false,
-			responsiveTl: false,
-			responsiveTp: false,
-			responsiveMl: false,
-			moreText: '...',
-			childIcons: false,
-			childIconsClass: 'has-child-icon'
-		};
+ ;(function ($, window, document, undefined ) {
+ 	var pluginName = 'wmS3Menu',
+ 	defaults = {
+ 		screenButton: false,
+ 		responsiveTl: false,
+ 		responsiveTp: false,
+ 		responsiveMl: false,
+ 		moreText: '...',
+ 		childIcons: false,
+ 		childIconsClass: 'has-child-icon'
+ 	};
 	// Проверка на касание
 	var isTouchable = ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
 	var $win = $(window);
@@ -1759,7 +993,9 @@ $(function() {
 	setTimeout(function(){
 		$win.trigger('resize');
 	}, 500);
-}(jQuery, window, document));
+}
+
+(jQuery, window, document));
 $(function () {
 	$(document).click(function (event) {
 		$('.contacts-block').each(function() {
@@ -1787,10 +1023,10 @@ $(function () {
 
 	$('.contacts-block').each(function() {
 		var $block = $(this),
-			allClasses = $block.attr("class").split(" "),
-			mainClass = allClasses[0],
-            mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
-			styles = document.styleSheets;
+		allClasses = $block.attr("class").split(" "),
+		mainClass = allClasses[0],
+		mainSelector = document.location.pathname == "/" ? ".title-page .side-panel ."+mainClass+" .block-body-drop" : ".side-panel ."+mainClass+" .block-body-drop",
+		styles = document.styleSheets;
 
 		for(var i = 0; i < styles.length; i++) {
 			if (styles[i].href && styles[i].href.indexOf("styles.css") !== -1) {
@@ -1829,6 +1065,7 @@ $(function () {
 		});
 	});
 });
+
 document.addEventListener('DOMContentLoaded', function() {
 	var bodyScrollBarWidth = (function () {
 		var widthHidden, widthScroll, currentValue, currentPriority;
@@ -2098,64 +1335,64 @@ document.addEventListener('DOMContentLoaded', function() {
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-"use strict";
+ "use strict";
 
-(function (exports) {
+ (function (exports) {
 
-	function sign(number) {
-		if (number < 0)
-			return -1;
-		if (number > 0)
-			return 1;
-		return 0;
-	}
+ 	function sign(number) {
+ 		if (number < 0)
+ 			return -1;
+ 		if (number > 0)
+ 			return 1;
+ 		return 0;
+ 	}
 
-	function Animator(delegate) {
-		this.delegate = delegate;
-		this.startTimeStamp = 0;
-		this.request_ = null;
-	};
+ 	function Animator(delegate) {
+ 		this.delegate = delegate;
+ 		this.startTimeStamp = 0;
+ 		this.request_ = null;
+ 	};
 
-	Animator.prototype.scheduleAnimation = function () {
-		if (this.request_)
-			return;
-		this.request_ = requestAnimationFrame(this.onAnimation_.bind(this));
-	};
+ 	Animator.prototype.scheduleAnimation = function () {
+ 		if (this.request_)
+ 			return;
+ 		this.request_ = requestAnimationFrame(this.onAnimation_.bind(this));
+ 	};
 
-	Animator.prototype.startAnimation = function () {
-		this.startTimeStamp = 0;
-		this.scheduleAnimation();
-	};
+ 	Animator.prototype.startAnimation = function () {
+ 		this.startTimeStamp = 0;
+ 		this.scheduleAnimation();
+ 	};
 
-	Animator.prototype.stopAnimation = function () {
-		cancelAnimationFrame(this.request_);
-		this.startTimeStamp = 0;
-		this.request_ = null;
-	};
+ 	Animator.prototype.stopAnimation = function () {
+ 		cancelAnimationFrame(this.request_);
+ 		this.startTimeStamp = 0;
+ 		this.request_ = null;
+ 	};
 
-	Animator.prototype.onAnimation_ = function (timeStamp) {
-		this.request_ = null;
-		if (!this.startTimeStamp)
-			this.startTimeStamp = timeStamp;
-		if (this.delegate.onAnimation(timeStamp))
-			this.scheduleAnimation();
-	};
+ 	Animator.prototype.onAnimation_ = function (timeStamp) {
+ 		this.request_ = null;
+ 		if (!this.startTimeStamp)
+ 			this.startTimeStamp = timeStamp;
+ 		if (this.delegate.onAnimation(timeStamp))
+ 			this.scheduleAnimation();
+ 	};
 
-	function VelocityTracker() {
-		this.recentTouchMoves_ = [];
-		this.velocityX = 0;
-		this.velocityY = 0;
-	}
+ 	function VelocityTracker() {
+ 		this.recentTouchMoves_ = [];
+ 		this.velocityX = 0;
+ 		this.velocityY = 0;
+ 	}
 
-	VelocityTracker.kTimeWindow = 50;
+ 	VelocityTracker.kTimeWindow = 50;
 
-	VelocityTracker.prototype.pruneHistory_ = function (timeStamp) {
-		for (var i = 0; i < this.recentTouchMoves_.length; ++i) {
-			if (this.recentTouchMoves_[i].timeStamp > timeStamp - VelocityTracker.kTimeWindow) {
-				this.recentTouchMoves_ = this.recentTouchMoves_.slice(i);
-				return;
-			}
-		}
+ 	VelocityTracker.prototype.pruneHistory_ = function (timeStamp) {
+ 		for (var i = 0; i < this.recentTouchMoves_.length; ++i) {
+ 			if (this.recentTouchMoves_[i].timeStamp > timeStamp - VelocityTracker.kTimeWindow) {
+ 				this.recentTouchMoves_ = this.recentTouchMoves_.slice(i);
+ 				return;
+ 			}
+ 		}
 		// All touchmoves are old.
 		this.recentTouchMoves_ = [];
 	};
@@ -2210,7 +1447,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				3 * i * i * (1 - i) * spec[2] + i * i * i,
 				3 * i * (1 - i) * (1 - i) * spec[1] +
 				3 * i * i * (1 - i) * spec[3] + i * i * i
-			]);
+				]);
 		}
 	};
 
@@ -2385,12 +1622,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	DrawerController.prototype.isOpening = function () {
 		return this.state == DrawerController.kOpening ||
-			(this.state == DrawerController.kFlinging && this.animationVelocityX > 0);
+		(this.state == DrawerController.kFlinging && this.animationVelocityX > 0);
 	}
 
 	DrawerController.prototype.isClosing = function () {
 		return this.state == DrawerController.kClosing ||
-			(this.state == DrawerController.kFlinging && this.animationVelocityX < 0);
+		(this.state == DrawerController.kFlinging && this.animationVelocityX < 0);
 	}
 
 	DrawerController.prototype.toggle = function () {
