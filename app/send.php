@@ -20,7 +20,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->setFrom('sendallmailrus@yandex.ru');
 $mail->addAddress('dev4@e2.group');
-// $mail->addAddress('nikdv27@bk.ru');
+$mail->addAddress('hadesyara@gmail.com');
 
 
 $method = $_SERVER['REQUEST_METHOD'];
