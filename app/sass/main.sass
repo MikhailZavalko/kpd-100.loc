@@ -1,0 +1,784 @@
+@import "vars"
+@import "libs"
+
+
+
+.img-responsive
+	max-width: 100%
+	display: block
+	height: auto
+
+.title-page
+	.blocklist-25
+		.item
+			margin-top: 0
+		.list
+			width: 100%
+	.widget-16
+		width: 470px
+
+.title-page .block-14
+	margin: 0 0 auto 70px
+
+.spoiler
+	display: none
+
+.gray-bg
+	background: #f7f7f7!important
+
+.items-block
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-column-gap: 30px
+	margin: 45px 0
+	.item
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: center
+		text-align: center
+		.image
+			max-width: 110px
+		h3
+			font-size: 18px
+			text-align: center
+		p
+			width: 100%
+			font-size: 14px
+			line-height: 1.4
+			margin-top: 0
+
+.title-page
+	.blocklist-23
+		.services
+			padding: 0
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-gap: 25px
+			li
+				position: relative
+				list-style-type: none
+				a
+					text-decoration: none
+					&:hover
+						.text
+							span
+								text-decoration: underline
+				.text
+					color: #040404
+					flex-direction: column
+					padding: 25px 15px
+					p
+						margin: 0 0 15px 0
+						font-size: 16px
+						font-weight: 500
+						line-height: 1.3
+						&:last-child
+							margin: 0
+					span
+						color: #040404
+						font-size: 26px
+
+
+.text-popup-window
+	display: flex
+	flex-direction: column
+	max-width: 800px
+	margin: 0 auto
+	background: url(../img_wraper2.jpg) center no-repeat
+	background-size: cover
+	padding: 30px
+	position: relative
+	h3
+		font-size: 25px
+		text-align: left
+		color: #ffae00
+		font-weight: 800
+	p, ul>li
+		font-size: 15px
+		text-align: left
+		font-family: Montserrat, sans-serif
+		color: rgba(255, 255, 255, 0.8)
+		span
+			color: #ffae00
+
+
+.popup-window
+	display: flex
+	max-width: 500px
+	margin: 0 auto
+	background: url(../img_wraper2.jpg) center no-repeat
+	background-size: cover
+	padding: 30px
+	position: relative
+	.mfp-close
+		position: absolute
+		right: 0
+		top: 0
+		color: #fff
+		font-size: 25px
+		width: 30px
+		height: 30px
+	&::before
+		content: ''
+		box-sizing: border-box
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		transition-property: opacity, visibility
+		transition-duration: .15s
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -25px
+		margin-left: -25px
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border-style: solid
+		border-color: #ffae00 rgba( 198, 198, 198, 0.5 ) rgba( 198, 198, 198, 0.5 )
+		border-width: 4px
+		animation: loading-spin .7s infinite linear
+	&::after
+		content: ''
+		background-color: rgba(#171626,.9)
+		border-radius: 5px
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 9
+		opacity: 0
+		visibility: hidden
+	&.loading
+		&::before, &::after
+			opacity: 1
+			visibility: visible
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	padding: 15px
+	box-sizing: border-box
+	text-align: center
+	z-index: 2
+	font-weight: 300
+	background-color: #171626
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	font-size: 30px
+	display: none
+	h4
+		color: #ffae00
+		margin: 0
+		line-height: 1
+		font-size: 26px
+		text-transform: uppercase
+		text-align: center
+	p
+		color: #fff
+		font-size: 18px
+		font-weight: 500
+		margin-top: 25px
+	&.visible
+		display: flex
+
+.title-page .block-6.houses-page-top
+	background: url("../img_header.jpg") bottom no-repeat
+	background-size: cover
+
+.block-19
+	padding: 70px 50px!important
+
+.widget-30
+	text-align: left!important
+	font-size: 30px!important
+	text-decoration: none!important
+	box-sizing: border-box!important
+	margin-top: 20px!important
+	font-weight: 800!important
+	width: 691px!important
+	margin-left: 4px!important
+	right: 0!important
+
+.description
+	.sub-descr
+		text-align: center
+		font-size: 16px
+
+.title-page .blocklist-23 .text
+	padding-left: 25px
+
+.title-page .editable_block-11 .title span
+	font-size: 22px
+
+.title-page .editable_block-28 .img-convert a
+	border-radius: 4px
+	margin-bottom: 0
+	overflow: hidden
+
+.title-page .block-14.different
+	margin: 0 70px auto 0
+
+.fancybox-button,
+.fancybox-button:link,
+.fancybox-button:visited
+	color: #ccc!important
+
+.fancybox-button:hover
+	color: #fff!important
+
+.title-page .block-2.logo-descr
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.title-page .block-13.description-head
+	padding: 70px 50px 0 50px
+	justify-content: center
+	h2
+		text-align: center
+		color: #fff
+		font-size: 30px
+		margin: 0
+		text-transform: uppercase
+
+.title-page .description-block .blocklist-23 .item-outer
+	width: auto
+
+.title-page.houses-page .editable_block-11 .title
+	// margin-left: 80px
+	// background: rgba(#ffae00, .45)
+	// padding: 5px
+
+.title-page.houses-page .editable_block-12 p:last-child
+	display: inline-block
+	// padding: 3px
+	// background: rgba(#ffae00, .45)
+
+.title-page.houses-page .phones-9 .block-body-drop
+	// background: rgba(#ffae00, .45)
+	// padding-right: 5px
+
+.title-page.houses-page .widget-5.head-button
+	background: #ffae00
+	&:hover
+		background: transparent
+
+.houses-page-top .send-mail
+	// padding: 3px
+	// background: rgba(#ffae00, .45)
+	display: inline-block
+	&:hover
+		color: #000
+
+.title-page .blocklist-23 .text .widget-5
+	color: #3c3939
+	margin-left: 0
+
+.title-page .email-14 .icon.instagram
+	background: url("/img/instagram.png") left 50% top 50% / auto auto no-repeat
+
+.title-page.houses-page
+	.widget-2
+		display: inline-block
+	.widget-3
+		display: inline-block
+		// background: rgba(#ffae00, .45)
+		// color: #fff
+	.block-3
+		text-align: left
+	.widget-8
+		margin: 41px 0 0
+	.widget-5
+		margin-left: 80px
+		width: 100%
+		outline: none
+	// .site-name-3 .sn-text
+	// 	background: rgba(#ffae00, .45)
+	.email-14 .text_body
+		width: auto
+
+.title-page .editable_block-29 .text span
+	text-transform: uppercase
+
+.content-52 h3 span
+	text-transform: uppercase
+
+.content-52 h2
+	font-size: 24px!important
+	margin: 20px 0!important
+
+.title-page b span, .title-page strong span
+	text-transform: uppercase
+	color: #3c3939
+
+#map
+	width: 100%
+	height: 450px
+	position: relative
+
+#map-sales
+	width: 100%
+	height: 450px
+	position: relative
+
+.title-page .blocklist-23 .title
+	padding-left: 40px!important
+
+.content-52 h2.next-h
+	margin-top: 80px!important
+	&.center
+		text-align: center!important
+
+.no-dots
+	li
+		list-style-type: none
+
+.prod-list
+	display: grid
+	grid-column-gap: 30px
+	grid-row-gap: 60px
+	grid-template-columns: repeat(6, 1fr)
+	grid-template-areas: "a a b b c c"". d d e e ."
+	margin: 60px auto 0 auto
+	.prod-item
+		position: relative
+		min-height: 550px
+		&:nth-child(1)
+			grid-area: a
+			background: url('../img/production/1.jpg') center no-repeat
+			background-size: cover
+		&:nth-child(2)
+			grid-area: b
+			background: url('../img/production/2.jpg') center no-repeat
+			background-size: cover
+		&:nth-child(3)
+			grid-area: c
+			background: url('../img/production/3.jpg') center no-repeat
+			background-size: cover
+		&:nth-child(4)
+			grid-area: d
+			background: url('../img/production/4.jpg') center no-repeat
+			background-size: cover
+		&:nth-child(5)
+			grid-area: e
+			background: url('../img/production/5.jpg') center no-repeat
+			background-size: cover
+	.text
+		background: rgba(#fff, .7)
+		width: 90%
+		padding: 10px
+		position: absolute
+		top: 50%
+		right: 50%
+		transform: translate(50%, -50%)
+		h3
+			font-size: 26px
+			color: #040404
+			margin: 0
+			text-align: center
+
+@-webkit-keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+
+@keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+.spinner
+	position: relative
+
+.video
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+
+.video iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.title-page
+	.phones-9
+		.inner
+			&.just-phone
+				flex-direction: row
+				.icon
+					margin-left: 10px
+					margin-right: 10px
+				p
+					font-size: 24px
+		.title
+			&.opacity
+				opacity: 0
+				visibility: hidden
+				font-size: 4px
+
+
+
+.title-page .blocklist-23 .image
+	.house-price
+		position: absolute
+		left: -3px
+		top: 2px
+		width: 138px
+		height: 138px
+		background: url('../img/price-sticker.svg') center no-repeat
+		color: #ffffff
+		span
+			position: absolute
+			right: 12px
+			top: 39px
+			width: 150px
+			font-size: 20px
+			font-weight: 700
+			transform: rotate(-45deg)
+			margin: 0
+			text-align: center
+			color: #ffffff
+
+.title-page .align-elem
+	margin: 0
+	h2.tac
+		text-align: center
+
+.title-page .blocklist-25 .header
+	justify-content: center
+
+.title-page.houses-page
+	.houses-text-block
+		.widget-5
+			width: auto
+			max-width: 370px
+			margin: 40px auto 100px
+
+
+
+progress[value]
+	border: none
+	width: 100%
+  height: 20px
+	background-color: #fff
+	position: relative
+	margin: 0 0 1.5em
+
+progress[value]::progress-bar
+	box-shadow: 0 2px 3px rgba(0,0,0,.5) inset
+
+progress[value]::progress-value
+	position: relative
+	border-radius: 3px
+
+progress[value]::progress-value:after
+	content: ''
+	position: absolute
+	width: 5px
+	height: 5px
+	top: 7px
+	right: 7px
+	background-color: white
+
+.progress-bar
+	width: 100%
+	height: 20px
+
+.progress-bar span
+	display: block
+	text-indent: -9999px
+
+p[data-value]
+  position: relative
+
+p[data-value]:after
+	content: attr(data-value) '%'
+	position: absolute
+	right: 0
+
+progress[value]::-moz-progress-bar
+	background-color: #ffae00
+progress[value]::-webkit-progress-value
+	background-color: #ffae00
+
+.results
+	margin-top: 20px
+	padding-top: 60px
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 5px
+		background-color: #ffae00
+	h4
+		font-size: 24px
+		color: rgba(255,255,255,.8)
+
+
+
+.title-page.houses-page .block-11
+	padding: 35px 50px
+
+.type-text-block
+	ul
+		li
+			h3
+				display: inline-block
+	p
+		.spec
+			text-transform: uppercase
+			font-weight: 700
+			color: #3c3939
+
+.title-page .side-panel-46 .side-panel-content-inner
+	height: 100%
+.title-page .side-panel .widget-4
+	height: 100%
+	justify-content: flex-start
+
+
+.sticky-button
+	position: fixed
+	z-index: 10
+	right: 6%
+	bottom: 210px
+	width: 70px
+	height: 70px
+	outline: none
+	path
+		fill: $yellow
+		transition: $time
+	.circle-phone
+		background-color: #fff
+		border: 2px $yellow solid
+		box-sizing: border-box
+		border-radius: 100%
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 2
+		position: relative
+	.circle
+		position: absolute
+		width: 100%
+		height: 100%
+		border-radius: 100%
+		top: 0
+		left: 0
+		transform-origin: 50% 50%
+		z-index: 0
+		&.first
+			border: 2px $yellow solid
+			box-sizing: border-box
+			animation: pin 2.5s linear 0s infinite normal
+			background: none
+		&.second
+			background: $yellow
+			animation: pin 3s linear 0s infinite normal
+	&:hover
+		path
+			fill: $black
+
+@keyframes pin
+	0%
+		opacity: .6
+		transform: scale(1)
+	100%
+		opacity: 0
+		transform: scale(1.4)
+
+.form
+	padding: 45px 50px 30px 50px
+	display: flex
+	flex-direction: column
+	position: relative
+	max-width: 400px
+	background: #f2f2f2
+	text-align: center
+	margin: auto
+	h4
+		font-size: 27px
+		font-weight: 700
+		line-height: 1.1
+		margin: 0 0 10px 0
+		text-align: center
+	a
+		color: $yellow
+		text-decoration: none
+		display: inline-block
+		position: relative
+		font-size: 28px
+		font-weight: 500
+		margin: 7px 0 12px
+		svg
+			margin-bottom: -3px
+			path
+				fill: $yellow
+		&::after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 0
+			width: 100%
+			height: 3px
+			background-color: transparent
+			transition: $time
+		&:hover
+			&::after
+				background-color: $yellow
+	p
+		font-size: 18px
+		margin: 0 0 25px
+		padding: 0
+		line-height: 1.2
+		background: none
+		font-style: normal
+		&.personal-data
+			font-size: 11px
+			font-weight: 300
+			color: #777
+			line-height: 1.3
+			margin: 0 0 0 4px
+	.input
+		margin-bottom: 11px
+		text-align: center
+		font-size: 16px
+		font-weight: 300
+		border: 1px #C3C3C3 solid
+		height: 40px
+		width: 100%
+		box-sizing: border-box
+		font-family: $default-font
+		&::placeholder
+			color: #000
+		&:focus
+			border: 1px #C3C3C3 solid
+			&::placeholder
+				color: transparent
+	.button
+		width: 100%
+		font-size: 18px
+		height: 50px
+		margin: 15px 0 15px 0
+		font-weight: 700
+		border: 2px solid $yellow
+		background: $yellow
+		transition: $time
+		&:hover
+			cursor: pointer
+			background: transparent
+	.confirm
+		display: flex
+		align-items: flex-start
+		justify-content: center
+	.success
+		font-weight: 900
+		background-color: #fff
+		p
+			color: #000
+			font-size: 16px
+			font-weight: 500
+			span
+				color: $accent
+				font-size: 30px
+				margin-bottom: 0
+				line-height: 1
+				text-transform: uppercase
+				span
+					color: $fontcolor
+					font-size: 18px
+					font-weight: 400
+					margin-top: 25px
+					display: block
+					line-height: 1.2
+	&::before
+		content: ''
+		box-sizing: border-box
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		transition-property: opacity, visibility
+		transition-duration: .15s
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -25px
+		margin-left: -25px
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border-style: solid
+		border-color: $yellow rgba( 198, 198, 198, 0.5 ) rgba( 198, 198, 198, 0.5 )
+		border-width: 4px
+		animation: loading-spin .7s infinite linear
+	&::after
+		content: ''
+		background-color: rgba(255,255,255,.8)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 10px
+		z-index: 9
+		opacity: 0
+		visibility: hidden
+	&.loading
+		&::before, &::after
+			opacity: 1
+			visibility: visible
+
+@-webkit-keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+
+@keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+
+
+
+
+
+
+
+.d-none
+	display: none
+
+
+
+
+
+
+
+@import "media"
