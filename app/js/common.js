@@ -46,6 +46,17 @@ $(function() {
 
 
 
+	/* FANCYBOX SETTINGS */
+	$('.fancybox').fancybox({
+		thumbs : {
+			autoStart : true,
+			axis : 'x'
+		}
+	});
+	/* FANCYBOX SETTINGS */
+
+
+
 	/* SLIDERS */
 	$('#sync1').slick({
 		slidesToShow: 1,
