@@ -368,6 +368,9 @@ html.title-page{
   flex-grow: 1;
   max-width: 100%;
 }
+.title-page h1.align-elem {
+  background: rgba(157, 157, 157, 0.4);
+}
 .title-page html.mobile div {
   background-attachment: scroll;
 }
@@ -418,7 +421,7 @@ html.title-page{
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  background: url("img_wraper2.jpg") left 50% top 0px / auto auto no-repeat;
+  /*background: url("img_wraper2.jpg") left 50% top 0px / auto auto no-repeat;*/
   background-attachment: fixed;
   -webkit-border-radius: none;
   -moz-border-radius: none;
@@ -726,7 +729,7 @@ html.title-page{
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   text-decoration: none;
   font-size: 13px;
   font-weight: normal;
@@ -1136,7 +1139,7 @@ html.title-page{
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   text-decoration: none;
 }
 .title-page .editable_block-35 .price {
@@ -2493,7 +2496,7 @@ html.title-page{
   -moz-justify-content: flex-start;
   justify-content: flex-start;
   font-family: Montserrat, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.6;
@@ -3110,7 +3113,7 @@ html.title-page{
   -moz-align-items: flex-start;
   align-items: flex-start;
   font-family: Montserrat, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   text-decoration: none;
 }
 .title-page .editable_block-28 .body {
@@ -4887,7 +4890,7 @@ html.title-page{
   display: flex;
   text-align: left;
   font-family: Montserrat, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   -webkit-justify-content: normal;
   -moz-justify-content: normal;
   justify-content: normal;
@@ -5094,7 +5097,7 @@ html.title-page{
   z-index: 1;
   pointer-events: auto;
   font-family: Montserrat, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: #000;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
@@ -7296,7 +7299,8 @@ html.title-page{
   left: 0;
   width: 1200px;
   min-height: 0;
-  background: url("img_header.jpg") left 50% bottom 0px / auto auto no-repeat;
+  background: url("img/index-top-image.jpg") no-repeat;
+  background-position: center top;
   background-size: cover;
   max-width: 100%;
   z-index: 2;
@@ -7771,9 +7775,10 @@ html.title-page{
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
+  justify-content: flex-end;
 }
 .title-page .block-8 {
-  margin: 10px 0 0;
+  margin: 55px 0 0;
   position: relative;
   top: 0;
   left: 0;
@@ -7793,7 +7798,7 @@ html.title-page{
   right: 0;
 }
 .title-page .widget-9 {
-  margin: 400px 0 0 50px;
+  margin: 20px 0 0 50px;
   position: relative;
   top: 0;
   left: 0;
@@ -7868,23 +7873,18 @@ html.title-page{
 }
 .title-page .email-14 .text_body {
   box-sizing: border-box;
-  display: -webkit-flex;
   display: flex;
   text-align: right;
   font-family: Montserrat, sans-serif;
   color: #fff;
   text-decoration: underline;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
   justify-content: flex-end;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   margin-right: 0;
   margin-top: 3px;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
   align-items: flex-start;
-  width: 250px;
+  width: 315px;
   margin-left: auto;
 }
 .title-page .email-14 .text_body:hover, .title-page .email-14 .text_body.hover, .title-page .email-14 .text_body.active {
@@ -7917,7 +7917,7 @@ html.title-page{
   -moz-border-radius: none;
   border-radius: none;
   padding-top: 120px;
-  padding-left: 50px;
+  padding-left: 25px;
 }
 .title-page .widget-8 {
   margin: 130px 0 0;
@@ -8235,7 +8235,7 @@ html.title-page{
   -moz-justify-content: flex-start;
   justify-content: flex-start;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 0;
 }
 .title-page .editable_block-12 .price {
@@ -8852,7 +8852,7 @@ html.title-page{
   -webkit-border-radius: none;
   -moz-border-radius: none;
   border-radius: none;
-  padding-left: 80px;
+  padding-left: 60px;
 }
 .title-page .editable_block-11 .image {
   box-sizing: border-box;
@@ -9374,7 +9374,7 @@ html.title-page{
   z-index: 3;
   text-align: undefined;
   box-sizing: border-box;
-  width: 280px;
+  width: 350px;
 }
 .title-page .phones-9 p:first-child {
   margin-top: 0;
@@ -9437,18 +9437,14 @@ html.title-page{
 }
 .title-page .phones-9 .title {
   box-sizing: border-box;
-  display: -webkit-flex;
   display: flex;
   text-align: right;
   font-family: Montserrat, sans-serif;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   text-decoration: none;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
   justify-content: flex-end;
-  font-size: 13px;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
+  font-size: 16px;
+  font-weight: bold;
   align-items: flex-start;
   margin-bottom: 3px;
 }

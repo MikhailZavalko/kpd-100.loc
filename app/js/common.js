@@ -1,111 +1,87 @@
-$(function() {
-
-	/* OPEN MOBILE MENU & CLOSE WHEN CLICK OUTSIDE */
-	$('.hamburger').on('click', function () {
-		$(this).toggleClass('is-active');
-		$('.menu').toggleClass('active');
-	});
-
-	$(document).click( function(e){
-		if ( !$(e.target).closest('.main-head').length ) {
-			$('.hamburger').removeClass('is-active');
-			$('.menu').removeClass('active');
-		}
-	});
-	/* OPEN MOBILE MENU & CLOSE WHEN CLICK OUTSIDE */
-
-
-
-	/* SCROLL FOR HEADER */
-	jQuery(document).ready(function($) {
-		$(window).on('scroll touchmove', function () {
-			$('.header').toggleClass('shrinked', $(document).scrollTop() > 0);
-    }).scroll();
-	});
-	/* SCROLL FOR HEADER */
-
-
-
-	/* MENU TRIGGER FOR SCROLL */
-	$(".menu li a").click(function () {
-		elementClick = $(this).attr("href");
-		destination = $(elementClick).offset().top - 73;
-		destination = elementClick == '#home' ? destination - 20 : destination;
-		$("html,body").stop().animate({ scrollTop: destination }, 1000);
-		$(".hamburger").removeClass('is-active');
-		$('.menu').removeClass('active');
-		return false;
-	});
-	/* MENU TRIGGER FOR SCROLL */
-
-
+$(window).on('load', function() {
 
 	/* MASK PHONE INPUT */
-	$('.phone').mask('+7(999) 999 99 99');
+	$('.phone-number').mask('+7(999) 999 99 99');
 	/* MASK PHONE INPUT */
 
 
 
 	/* FANCYBOX SETTINGS */
 	$('.fancybox').fancybox({
-		thumbs : {
-			autoStart : true,
-			axis : 'x'
+		loop: false,
+		thumbs: {
+			autoStart: true,
+			axis: 'x'
 		}
 	});
 	/* FANCYBOX SETTINGS */
 
 
-
-	/* SLIDERS */
-	$('#sync1').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: true,
-		fade: true,
-		asNavFor: '#sync2',
-		autoplay: true,
-  	autoplaySpeed: 6000,
+	/* JS FOR SPOILER */
+	$( '.spoiler' ).on( 'click', function(e) {
+		e.preventDefault();
+		$( '.spoiler-wrap' ).css( 'display', 'none' );
+		$( '.spoiler' ).css( 'display', 'block' );
 	});
-
-	$('#sync2').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '#sync1',
-		centerMode: true,
-		focusOnSelect: true
-	});
+	/* JS FOR SPOILER */
 
 
 
-	$('#sync3').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		dots: true,
-		fade: true,
-		asNavFor: '#sync4',
-		autoplay: true,
-  	autoplaySpeed: 6000,
-	});
-
-	$('#sync4').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		fade: true,
-		asNavFor: '#sync3',
-		centerMode: true,
-		focusOnSelect: true
-	});
-	/* SLIDERS */
-	
+	/* FANCYBOX */
+	$(".fancybox").fancybox();
+	/* FANCYBOX */
 
 
-	/* Magnific Popup */
+
+	/* YANDEX MAPS SETTINGS */
+	ymaps.ready(function() {
+
+		if( document.getElementById('map') ) {
+			var plant = new ymaps.Map("map",{
+				center: [48.458623, 135.129240],
+				zoom: 16,
+				controls: ['zoomControl'],
+				behaviors: ["drag", "dblClickZoom"]
+			}),
+			plantMarker = new ymaps.Placemark([48.458623, 135.129240],{ hintContent: "г. Хабаровск, ул. Иркутская, 8" },
+			{
+				iconLayout: "default#image",
+				iconImageHref: "img/marker_1.png",
+				iconImageSize: [423, 84],
+				iconImageOffset: [-404, -84]
+			});
+			plant.geoObjects.add(plantMarker);
+		}
+
+		
+
+		if( document.getElementById('map-sales') ) {
+			var salesDep = new ymaps.Map("map-sales",{
+				center: [48.471580, 135.066150],
+				zoom: 16,
+				controls: ['zoomControl'],
+				behaviors: ["drag", "dblClickZoom"]
+			}),
+			depMarker = new ymaps.Placemark([48.471580, 135.066150],{ hintContent: "г. Хабаровск, ул. Калинина, 51" },
+			{
+				iconLayout: "default#image",
+				iconImageHref: "img/marker_2.png",
+				iconImageSize: [430, 128],
+				iconImageOffset: [-22, -128]
+			});
+			salesDep.geoObjects.add(depMarker);
+		}
+
+
+
+
+
+	})
+	/* YANDEX MAPS SETTINGS */
+
+
+
+	/* MAGNIFIC POPUP */
 	$('.open-form-button').magnificPopup({
 		type: 'inline',
 		fixedContentPos: false,
@@ -126,7 +102,7 @@ $(function() {
 			}
 		}
 	});
-	/* Magnific Popup */
+	/* MAGNIFIC POPUP */
 
 
 
@@ -151,6 +127,6 @@ $(function() {
 		});
 		return false;
 	});
-	/* E-mail Ajax Send */
+
 
 });
