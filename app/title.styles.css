@@ -367,9 +367,11 @@ html.title-page{
 .title-page .align-elem {
   flex-grow: 1;
   max-width: 100%;
+  font-weight: 600;
 }
 .title-page h1.align-elem {
   background: rgba(157, 157, 157, 0.4);
+  padding-left: 5px;
 }
 .title-page html.mobile div {
   background-attachment: scroll;
@@ -517,7 +519,7 @@ html.title-page{
   top: 0;
   left: 0;
   z-index: 2;
-  color: #8f8f8f;
+  color: #000;
   text-decoration: none;
   width: auto;
   right: 0;
@@ -623,17 +625,15 @@ html.title-page{
   width: 40px;
   display: inline-block;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjQ4IiBpZD0ic3ZnLTEiPjxwYXRoIGQ9Ik0xNC44MyAzMC44M2w5LjE3LTkuMTcgOS4xNyA5LjE3IDIuODMtMi44My0xMi0xMi0xMiAxMnoiIGlkPSJwYXRoLTIiIGZpbGwtb3BhY2l0eT0iMSIgdHlwZT0ic29saWRDb2xvciIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDBoNDh2NDhoLTQ4eiIgZmlsbD0ibm9uZSIgaWQ9InBhdGgtMyI+PC9wYXRoPjwvc3ZnPg==") left 50% top 50% / 31px no-repeat #ffae00;
-  -webkit-order: 0;
-  -moz-order: 0;
+  transition: .25s ease;
   order: 0;
   text-align: left;
   min-height: 40px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
   border-radius: 3px;
 }
 .title-page .up-41 .icon:hover, .title-page .up-41 .icon.hover, .title-page .up-41 .icon.active {
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjQ4IiBpZD0ic3ZnLTEiPjxwYXRoIGQ9Ik0xNC44MyAzMC44M2w5LjE3LTkuMTcgOS4xNyA5LjE3IDIuODMtMi44My0xMi0xMi0xMiAxMnoiIGlkPSJwYXRoLTIiIGZpbGwtb3BhY2l0eT0iMSIgdHlwZT0ic29saWRDb2xvciIgZmlsbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGQ9Ik0wIDBoNDh2NDhoLTQ4eiIgZmlsbD0ibm9uZSIgaWQ9InBhdGgtMyI+PC9wYXRoPjwvc3ZnPg==") left 50% top 50% / 31px no-repeat transparent;
+  background-color: #333;
 }
 .title-page .up-41 .title {
   box-sizing: border-box;
@@ -687,6 +687,7 @@ html.title-page{
   height: 16px;
   width: 40px;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTQuNzU3IDU0Ljc1NyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgZmlsbC1vcGFjaXR5PSIxIiB0eXBlPSJzb2xpZENvbG9yIiBmaWxsPSIjZmZmZmZmIj4KPHBhdGggZD0iTTQwLjk0LDUuNjE3QzM3LjMxOCwxLjk5NSwzMi41MDIsMCwyNy4zOCwwYy01LjEyMywwLTkuOTM4LDEuOTk1LTEzLjU2LDUuNjE3Yy02LjcwMyw2LjcwMi03LjUzNiwxOS4zMTItMS44MDQsMjYuOTUyICBMMjcuMzgsNTQuNzU3TDQyLjcyMSwzMi42QzQ4LjQ3NiwyNC45MjksNDcuNjQzLDEyLjMxOSw0MC45NCw1LjYxN3ogTTI3LjU1NywyNmMtMy44NTksMC03LTMuMTQxLTctN3MzLjE0MS03LDctN3M3LDMuMTQxLDcsNyAgUzMxLjQxNiwyNiwyNy41NTcsMjZ6IiBpZD0icGF0aC0yIj48L3BhdGg+CjxnIGlkPSJnLTMiPgo8L2c+CjxnIGlkPSJnLTQiPgo8L2c+CjxnIGlkPSJnLTUiPgo8L2c+CjxnIGlkPSJnLTYiPgo8L2c+CjxnIGlkPSJnLTciPgo8L2c+CjxnIGlkPSJnLTgiPgo8L2c+CjxnIGlkPSJnLTkiPgo8L2c+CjxnIGlkPSJnLTEwIj4KPC9nPgo8ZyBpZD0iZy0xMSI+CjwvZz4KPGcgaWQ9ImctMTIiPgo8L2c+CjxnIGlkPSJnLTEzIj4KPC9nPgo8ZyBpZD0iZy0xNCI+CjwvZz4KPGcgaWQ9ImctMTUiPgo8L2c+CjxnIGlkPSJnLTE2Ij4KPC9nPgo8ZyBpZD0iZy0xNyI+CjwvZz4KPC9zdmc+") left 50% top 50% / 20px no-repeat;
+  background-color: #333;
   margin-right: 20px;
   min-height: 40px;
   -webkit-border-radius: 3px;
@@ -782,6 +783,7 @@ html.title-page{
   height: 16px;
   width: 40px;
   background: url("telephone.png@1556531182988") left 50% top 50% / 18px no-repeat;
+  background-color: #333;
   margin-right: 20px;
   min-height: 40px;
   -webkit-border-radius: 3px;
@@ -813,13 +815,10 @@ html.title-page{
 }
 .title-page .phones-38 .text_body {
   box-sizing: border-box;
-  display: -webkit-flex;
   display: flex;
   font-family: Montserrat, sans-serif;
-  -webkit-justify-content: normal;
-  -moz-justify-content: normal;
   justify-content: normal;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-size: 20px;
   font-weight: 800;
@@ -1546,24 +1545,16 @@ html.title-page{
   right: 0;
 }
 .title-page .block-13 .layout_28 {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .block-13 .layout_32 {
-  -webkit-flex: 1 0 0px;
-  -moz-flex: 1 0 0px;
   flex: 1 0 0px;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .block-13 {
-  padding: 70px 50px;
+  padding: 50px 50px;
   margin: 0 auto;
   border: none;
   position: relative;
@@ -2541,29 +2532,24 @@ html.title-page{
   padding: 25px 40px;
   border: 2px solid #ffae00;
   box-sizing: border-box;
-  display: -webkit-inline-flex;
   display: inline-flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
   text-align: center;
   height: 0;
   min-height: 14px;
   font-family: Montserrat, sans-serif;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-size: 15px;
   background: transparent;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   font-weight: 600;
+  transition: all .25s ease;
 }
 .title-page .editable_block-29 .more > a:hover, .title-page .editable_block-29 .more > a.hover, .title-page .editable_block-29 .more > a.active {
   background: #ffae00;
+  color: #fff;
 }
 .title-page .editable_block-29 .image a {
   box-sizing: border-box;
@@ -4072,7 +4058,7 @@ html.title-page{
   justify-content: flex-start;
   font-family: Montserrat, sans-serif;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   background: url("lozung_fitch.png@1556529553140") left 0px top 50% / 28px no-repeat;
   -webkit-border-radius: none;
   -moz-border-radius: none;
@@ -4871,13 +4857,8 @@ html.title-page{
   margin-bottom: 0;
 }
 .title-page .blocklist-21 .header {
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
   margin-bottom: 5px;
   text-align: right;
@@ -4886,24 +4867,17 @@ html.title-page{
 .title-page .blocklist-21 .header_text {
   font-size: 15px;
   box-sizing: border-box;
-  display: -webkit-flex;
   display: flex;
   text-align: left;
   font-family: Montserrat, sans-serif;
-  color: #000;
-  -webkit-justify-content: normal;
-  -moz-justify-content: normal;
+  color: #fff;
   justify-content: normal;
   text-decoration: none;
 }
 .title-page .blocklist-21 .all-in_header {
   display: none;
   box-sizing: border-box;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
 }
 .title-page .blocklist-21 .description {
@@ -4911,7 +4885,6 @@ html.title-page{
   overflow: hidden;
   text-align: right;
   margin-bottom: 30px;
-  display: -webkit-flex;
   display: flex;
   font-family: Montserrat, sans-serif;
   color: #fff;
@@ -5082,8 +5055,6 @@ html.title-page{
   pointer-events: none;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .blocklist-21 .title {
@@ -5097,9 +5068,7 @@ html.title-page{
   z-index: 1;
   pointer-events: auto;
   font-family: Montserrat, sans-serif;
-  color: #000;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
+  color: #fff;
   justify-content: flex-end;
   text-decoration: none;
   font-size: 15px;
@@ -5148,14 +5117,9 @@ html.title-page{
   pointer-events: auto;
 }
 .title-page .blocklist-21 .more > a {
-  display: -webkit-inline-flex;
   display: inline-flex;
   box-sizing: border-box;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
@@ -6780,11 +6744,7 @@ html.title-page{
   display: -webkit-inline-flex;
   display: inline-flex;
   box-sizing: border-box;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
   cursor: pointer;
   font-family: Montserrat, sans-serif;
@@ -6792,8 +6752,6 @@ html.title-page{
   text-decoration: none;
   font-size: 15px;
   background: transparent;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
   border-radius: 2px;
   font-weight: 600;
 }
@@ -7558,7 +7516,7 @@ html.title-page{
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
 }
 .title-page .menu-6 .menu-scroll > ul > li.menu-item > a:hover, .title-page .menu-6 .menu-scroll > ul > li.menu-item > a.hover, .title-page .menu-6 .menu-scroll > ul > li.menu-item > a.active {
@@ -7676,7 +7634,7 @@ html.title-page{
   display: none;
 }
 .title-page .block-2 {
-  margin: 12px 0 auto;
+  margin: 15px 0 auto;
   position: relative;
   top: 0;
   left: 0;
@@ -7699,17 +7657,14 @@ html.title-page{
   color: #ffae00;
   text-decoration: none;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   box-sizing: border-box;
   display: -webkit-flex;
   display: flex;
   width: auto;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
   justify-content: flex-start;
   right: 0;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
   align-items: flex-start;
 }
 .title-page .widget-2 {
@@ -7910,13 +7865,9 @@ html.title-page{
   z-index: 1;
   text-align: left;
   display: block;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
   border-radius: none;
-  padding-top: 120px;
+  padding-top: 125px;
   padding-left: 25px;
 }
 .title-page .widget-8 {
@@ -10020,24 +9971,17 @@ html.title-page{
   color: #ababab;
 }
 .title-page .block-12 .layout_25 {
-  -webkit-flex: 1 0 0px;
-  -moz-flex: 1 0 0px;
   flex: 1 0 0px;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .block-12 .layout_26 {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .block-12 {
-  padding: 70px 50px;
+  padding: 50px 50px;
   margin: 0 auto;
   border: none;
   position: relative;
@@ -10045,20 +9989,12 @@ html.title-page{
   left: 0;
   width: 1200px;
   min-height: 0;
-  background: #f7f7f7;
   z-index: 1;
   text-align: center;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
   max-width: 100%;
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
   border-radius: none;
 }
 .title-page .widget-15 {
@@ -11496,28 +11432,22 @@ html.title-page{
   right: 0;
   bottom: 0;
   pointer-events: none;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
   flex-direction: column;
 }
 .title-page .blocklist-25 .title {
   font-weight: bold;
   margin-bottom: 0;
-  display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
   pointer-events: auto;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
   justify-content: flex-start;
   font-family: Montserrat, sans-serif;
   color: #383838;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   margin-top: 5px;
 }
 .title-page .blocklist-25 .sub-title {
@@ -13290,8 +13220,6 @@ html.title-page{
   }
   .title-page .block-12 .layout_26 {
     margin-top: 0;
-    -webkit-order: 2;
-    -moz-order: 2;
     order: 2;
     display: -webkit-flex;
     display: flex;
@@ -13343,28 +13271,17 @@ html.title-page{
   }
   .title-page .widget-27 {
     margin-bottom: 0;
-    -webkit-flex-grow: 1;
-    -moz-flex-grow: 1;
     flex-grow: 1;
-    -webkit-flex-shrink: 1;
-    -moz-flex-shrink: 1;
     flex-shrink: 1;
   }
   .title-page .widget-26 {
     margin: 15px auto 0;
-    -webkit-flex-grow: 1;
-    -moz-flex-grow: 1;
     flex-grow: 1;
-    -webkit-flex-shrink: 1;
-    -moz-flex-shrink: 1;
     flex-shrink: 1;
   }
   .title-page .block-16 .layout_37 {
     margin-top: 0;
-    -webkit-order: 3;
-    -moz-order: 3;
     order: 3;
-    display: -webkit-flex;
     display: flex;
   }
   .title-page .block-16 .layout_38 {
