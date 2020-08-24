@@ -782,7 +782,7 @@ html.title-page{
   box-sizing: border-box;
   height: 16px;
   width: 40px;
-  background: url("telephone.png@1556531182988") left 50% top 50% / 18px no-repeat;
+  background: url("elephone.png") left 50% top 50% / 18px no-repeat;
   background-color: #333;
   margin-right: 20px;
   min-height: 40px;
@@ -872,7 +872,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -2222,7 +2222,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -2911,7 +2911,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -3626,7 +3626,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -3921,7 +3921,6 @@ html.title-page{
 }
 .title-page .blocklist-23 .text {
   margin-bottom: 0;
-  display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
   position: relative;
@@ -3929,8 +3928,6 @@ html.title-page{
   pointer-events: auto;
   font-family: Montserrat, sans-serif;
   color: #858585;
-  -webkit-justify-content: normal;
-  -moz-justify-content: normal;
   justify-content: normal;
   text-decoration: none;
   line-height: 1.5;
@@ -3942,15 +3939,10 @@ html.title-page{
 .title-page .blocklist-23 .image {
   box-sizing: border-box;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
-  display: -webkit-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
 }
 .title-page .blocklist-23 .item-label {
@@ -4681,7 +4673,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -6241,7 +6233,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -7893,7 +7885,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -8595,7 +8587,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -9471,7 +9463,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -10021,7 +10013,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;
@@ -11006,7 +10998,7 @@ html.title-page{
   width: 350px;
   box-sizing: border-box;
   vertical-align: middle;
-  background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628;
+  background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628;
   text-align: left;
   font-size: 12px;
   max-width: 100%;

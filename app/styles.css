@@ -113,7 +113,7 @@ body { background: #ffffff;}
 .phones-38 p:last-child { margin-bottom: 0;}
 .phones-38 .inner { box-sizing: border-box; position: relative; display: -webkit-flex; display: flex; text-align: left; vertical-align: top; max-width: 100%;}
 .phones-38 .cell-icon { box-sizing: border-box; display: -webkit-flex; display: flex; position: relative; z-index: 5; -webkit-flex-shrink: 0; -moz-flex-shrink: 0; flex-shrink: 0;}
-.phones-38 .icon { border: 2px solid #ffae00; box-sizing: border-box; height: 16px; width: 40px; background: url("telephone.png@1556531182988") left 50% top 50% / 18px no-repeat; margin-right: 20px; min-height: 40px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.phones-38 .icon { border: 2px solid #ffae00; box-sizing: border-box; height: 16px; width: 40px; background: url("elephone.png") left 50% top 50% / 18px no-repeat; margin-right: 20px; min-height: 40px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
 .phones-38 .block-body-drop { box-sizing: border-box; -webkit-flex: 1 0 0px; -moz-flex: 1 0 0px; flex: 1 0 0px;}
 .phones-38 .cell-text { box-sizing: border-box; display: -webkit-flex; display: flex; -webkit-flex-direction: column; -moz-flex-direction: column; flex-direction: column;}
 .phones-38 .title { box-sizing: border-box; display: block; font-family: Montserrat, sans-serif; color: #ffae00; text-decoration: none; font-size: 13px; margin-bottom: 5px;}
@@ -123,7 +123,7 @@ body { background: #ffffff;}
 .phones-38 input.tgl-but:checked + .block-body-drop { display: block;}
 .block-15 { margin: 0 0 auto; position: relative; top: 0; left: 0; width: 350px; min-height: 0; z-index: 2; text-align: left; display: block; -webkit-flex-direction: column; -moz-flex-direction: column; flex-direction: column; text-decoration: none;}
 .widget-21 { margin: 0; position: relative; top: 0; left: 0; z-index: 2; text-align: center; box-sizing: border-box; min-height: 0; width: auto; right: 0;}
-.popover-wrap-35 .popover-body { padding: 40px; border: none; -webkit-border-radius: 5px 5px 0px 5px; -moz-border-radius: 5px 5px 0px 5px; border-radius: 5px 5px 0px 5px; position: relative; display: inline-block; width: 350px; box-sizing: border-box; vertical-align: middle; background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628; text-align: left; font-size: 12px; max-width: 100%;}
+.popover-wrap-35 .popover-body { padding: 40px; border: none; -webkit-border-radius: 5px 5px 0px 5px; -moz-border-radius: 5px 5px 0px 5px; border-radius: 5px 5px 0px 5px; position: relative; display: inline-block; width: 350px; box-sizing: border-box; vertical-align: middle; background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628; text-align: left; font-size: 12px; max-width: 100%;}
 .popover-wrap-35 .popover-body .form_text input { padding: 12px 20px 13px; border: 1px solid rgba(255,174,0,0.35); max-width: 100%; width: 100%; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; text-align: left; -webkit-appearance: none; font-family: Montserrat, sans-serif; color: #ffffff; font-style: normal; line-height: 1.2; text-transform: none; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.05);}
 .popover-wrap-35 .popover-body .form_text input:hover, 
 .popover-wrap-35 .popover-body .form_text input.hover, 
@@ -288,7 +288,7 @@ body { background: #ffffff;}
 .widget-5:hover, 
 .widget-5.hover, 
 .widget-5.active { background: #ffae00;}
-.popover-wrap-8 .popover-body { padding: 40px; border: none; -webkit-border-radius: 5px 5px 0px 5px; -moz-border-radius: 5px 5px 0px 5px; border-radius: 5px 5px 0px 5px; position: relative; display: inline-block; width: 350px; box-sizing: border-box; vertical-align: middle; background: url("form_yelow.png@1556544605372") right 0px bottom 0px / 19px no-repeat #171628; text-align: left; font-size: 12px; max-width: 100%;}
+.popover-wrap-8 .popover-body { padding: 40px; border: none; -webkit-border-radius: 5px 5px 0px 5px; -moz-border-radius: 5px 5px 0px 5px; border-radius: 5px 5px 0px 5px; position: relative; display: inline-block; width: 350px; box-sizing: border-box; vertical-align: middle; background: url("form_yelow.png") right 0px bottom 0px / 19px no-repeat #171628; text-align: left; font-size: 12px; max-width: 100%;}
 .popover-wrap-8 .popover-body .form_text input { padding: 12px 20px 13px; border: 1px solid rgba(255,174,0,0.35); max-width: 100%; width: 100%; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; text-align: left; -webkit-appearance: none; font-family: Montserrat, sans-serif; color: #ffffff; font-style: normal; line-height: 1.2; text-transform: none; text-decoration: none; font-size: 14px; background: rgba(255,255,255,0.05);}
 .popover-wrap-8 .popover-body .form_text input:hover, 
 .popover-wrap-8 .popover-body .form_text input.hover, 
