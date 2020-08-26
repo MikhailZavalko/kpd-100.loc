@@ -315,8 +315,6 @@
 		display: inline-block
 	.widget-3
 		display: inline-block
-		// background: rgba(#ffae00, .45)
-		// color: #fff
 	.block-3
 		text-align: left
 	.widget-8
@@ -325,13 +323,12 @@
 		margin-left: 80px
 		width: 100%
 		outline: none
-	// .site-name-3 .sn-text
-	// 	background: rgba(#ffae00, .45)
 	.email-14 .text_body
 		width: auto
 
 .title-page .editable_block-29 .text span
 	text-transform: uppercase
+	font-size: 18px
 
 .content-52 h3 span
 	text-transform: uppercase
@@ -834,6 +831,16 @@ progress[value]::-webkit-progress-value
 	.bordered-image
 		border: 10px solid $yellow
 		margin: 25px auto
+
+.widget-type-contacts_phone
+	text-decoration: none
+	.text_body .align-elem span
+		transition: .25s ease
+	&:hover
+		.text_body
+			.align-elem
+				span
+					color: $yellow
 
 
 
