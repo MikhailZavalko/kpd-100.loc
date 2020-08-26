@@ -14,11 +14,11 @@
 	<link rel="stylesheet" href="title.styles.css?v=2.5">
 
 	<!-- CUSOM CSS CODE -->
-	<link rel="stylesheet" href="css/main.min.css?v=2.9">
+	<link rel="stylesheet" href="css/main.min.css?v=2.10">
 	<!-- CUSOM CSS CODE -->
 
 	<!-- CUSTOM JS CODE -->
-	<script type="text/javascript" src="js/scripts.min.js?v=2.8"></script>
+	<script type="text/javascript" src="js/scripts.min.js?v=2.10"></script>
 	<!-- CUSTOM JS CODE -->
 
 	<script src="adaptiveimage.js"></script>
@@ -284,7 +284,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/people_1/1.jpg" data-fancybox="house-people_1">
 														<div class="house-price"><span>2.50 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/people_1/sm.jpg?v=1.1" alt="Дом 90кв. м."></span>
 													</a>
 													<div class="d-none">
@@ -303,7 +303,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/people_2/scheme.jpg" data-fancybox="house-people_2">
 														<div class="house-price"><span>3.10 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/people_2/sm.jpg?v=1.1" alt="Дом 120кв. м"></span>
 													</a>
 													<div class="d-none">
@@ -318,7 +318,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/people_3/scheme.jpg" data-fancybox="house-people_3">
 														<div class="house-price"><span>3.69 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/people_3/sm.jpg?v=1.1" alt="Дом 150кв. м"></span>
 													</a>
 													<div class="d-none">
@@ -332,17 +332,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="controls">
-									<span class="prev"></span>
-									<span class="next"></span>
-								</div>
 
-								<div class="bx-pager-wrap">
-									<div class="bx-auto_controls">
-										<div class="auto_controls"></div>
-										<div class="pager-wrap"></div>
-									</div>
+								<div class="button-container">
+									<a class="open-form-button center-button" href="#take-people-house"><span>Заказать "Народный" дом</span></a>
 								</div>
+								
 							</div>
 						</div>
 
@@ -372,7 +366,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/classic_1/1.jpg" data-fancybox="house-classic_1">
 														<div class="house-price"><span>2.80 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/classic_1/sm.jpg?v=1.1" alt="Дом 90кв. м."></span>
 													</a>
 													<div class="d-none">
@@ -391,7 +385,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/classic_2/1.jpg" data-fancybox="house-classic_2">
 														<div class="house-price"><span>3.43 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/classic_2/sm.jpg?v=1.1" alt="Дом 120кв. м."></span>
 													</a>
 													<div class="d-none">
@@ -410,7 +404,7 @@
 												<div class="item">
 													<a class="image fancybox" href="img/houses/classic_3/1.jpg" data-fancybox="house-classic_3">
 														<div class="house-price"><span>4.07 млн ₽</span></div>
-														<div class="item-label"><div class="align-elem">Акция</div></div>
+														<div class="item-label"></div>
 														<span class="img-convert img-cover"><img src="img/houses/classic_3/sm.jpg?v=1.2" alt="Дом 150кв. м"></span>
 													</a>
 													<div class="d-none">
@@ -429,17 +423,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="controls">
-									<span class="prev"></span>
-									<span class="next"></span>
+
+								<div class="button-container">
+									<a class="open-form-button center-button" href="#take-classic-house"><span>Заказать дом "Классика"</span></a>
 								</div>
 
-								<div class="bx-pager-wrap">
-									<div class="bx-auto_controls">
-										<div class="auto_controls"></div>
-										<div class="pager-wrap"></div>
-									</div>
-								</div>
 							</div>
 						</div>
 
@@ -955,8 +943,54 @@
 			</span>
 			<p>Или оставьте заявку и наш менеджер <br>свяжется с вами</p>
 			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Поселок «Семейный»">
-			<input type="hidden" name="form_subject" value="Поселок «Семейный» | заявка на консультацию">
+			<input type="hidden" name="project_name" value="КПД-100">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на консультацию">
+			<!-- END Hidden Required Fields -->
+			<div class="inputs">
+				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
+				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input" type="text" name="email" placeholder="E-mail" required>
+			</div>
+			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
+			<div class="confirm">
+				<input class="checkbox" type="checkbox" checked required />
+				<p class="personal-data">Нажимая на кнопку, я даю свое согласие на обработку <br>персональных данных и соглашаюсь с условиями <br>политики конфиденциальности</p>
+			</div>
+		</form>
+
+
+
+		<form class="popup-form zoom-anim-dialog form white-bg" id="take-people-house" onsubmit="">
+			<div class="success">
+				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
+			</div>
+			<p>Оставьте заявку на "Народный" дом <br>и наш менеджер свяжется с вами</p>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="КПД-100">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на 'Народный' дом">
+			<!-- END Hidden Required Fields -->
+			<div class="inputs">
+				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
+				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input" type="text" name="email" placeholder="E-mail" required>
+			</div>
+			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
+			<div class="confirm">
+				<input class="checkbox" type="checkbox" checked required />
+				<p class="personal-data">Нажимая на кнопку, я даю свое согласие на обработку <br>персональных данных и соглашаюсь с условиями <br>политики конфиденциальности</p>
+			</div>
+		</form>
+
+
+
+		<form class="popup-form zoom-anim-dialog form white-bg" id="take-classic-house" onsubmit="">
+			<div class="success">
+				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
+			</div>
+			<p>Оставьте заявку на дом "Классика" <br>и наш менеджер свяжется с вами</p>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="КПД-100">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на дом 'Классика'">
 			<!-- END Hidden Required Fields -->
 			<div class="inputs">
 				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
@@ -988,10 +1022,10 @@
 
 			<div>
 				<h3>Ипотека НА ГОТОВЫЙ дом В ГОРОДЕ</h3>
-				<p><span>Уникальное предложение для тех, кто хочет построить свой дом, но не имеет залогового имущества или Поручителя на период строительства дома.</span></p>
-				<p><span>Если у Вас есть земельный участок в городе (в собственности, либо в аренде от 20 лет) – это предложение для Вас:</span></p>
-				<p>Завод домокомплектов <span>КПД 100 за свой счет построит Вам дом на Вашем участке!</span></p>
-				<p>А затем готовый дом оформит Вам <span>БЕЗ ЗАЛОГА и БЕЗ ПОРУЧИТЕЛЕЙ</span> в ипотеку</p>
+				<p><b>Уникальное предложение для тех, кто хочет построить свой дом, но не имеет залогового имущества или Поручителя на период строительства дома.</b></p>
+				<p><b>Если у Вас есть земельный участок в городе (в собственности, либо в аренде от 20 лет) – это предложение для Вас:</b></p>
+				<p>Завод домокомплектов <b>КПД 100 за свой счет построит Вам дом на Вашем участке!</b></p>
+				<p>А затем готовый дом оформит Вам <b>БЕЗ ЗАЛОГА и БЕЗ ПОРУЧИТЕЛЕЙ</b> в ипотеку</p>
 				<p><strong>условия получения ипотеки:</strong></p>
 				<ul>
 					<li>первоначальный взнос 30%;</li>

@@ -77,27 +77,55 @@
 						font-size: 26px
 
 
+.button-container
+	display: flex
+	justify-content: center
+	margin-top: 30px
+	.center-button
+		border: 2px solid #ffae00
+		background-color: #ffae00
+		text-decoration: none
+		color: #fff
+		font-size: 18px
+		padding: 15px 25px
+		transition: .25s ease
+		&:hover
+			background-color: transparent
+			color: #000
+
+
 .text-popup-window
 	display: flex
 	flex-direction: column
 	max-width: 800px
 	margin: 0 auto
-	background: url(../img_wraper2.jpg) center no-repeat
-	background-size: cover
+	background: #fff
 	padding: 30px
 	position: relative
 	h3
-		font-size: 25px
+		font-size: 26px
 		text-align: left
 		color: #ffae00
 		font-weight: 800
-	p, ul>li
+	p, ul>li, span
 		font-size: 15px
 		text-align: left
 		font-family: Montserrat, sans-serif
-		color: rgba(255, 255, 255, 0.8)
-		span
-			color: #ffae00
+		color: #000
+		font-weight: 500
+	.mfp-close
+		position: absolute
+		right: 0
+		top: 0
+		font-size: 30px
+		width: 40px
+		height: 40px
+
+.popup-form
+	.mfp-close
+		font-size: 30px
+		width: 40px
+		height: 40px
 
 
 .popup-window
