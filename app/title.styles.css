@@ -9288,6 +9288,9 @@ html.title-page{
   justify-content: center;
   right: 0;
 }
+.title-page .block-4.full-height-image {
+  margin: 400px 0 0;
+}
 .title-page .block-7 {
   margin: 11px 0 auto;
   border: none;
