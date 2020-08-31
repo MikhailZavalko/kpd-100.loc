@@ -119,11 +119,16 @@
 			</div>
 		</div>
 
+<div class="editorElement layer-type-block ui-droppable block-4 full-height-image">
 
-		<div class="editorElement layer-type-block ui-droppable block-4 full-height-image">
-			<div class="layout column layout_16"></div>
-			<div class="layout column layout_9"></div>
-			<div class="layout column layout_9">
+			<div class="layout column layout_16">
+				<div class="layout column layout_8">
+					<a class="open-form-button big-button button-8 widget-5 widget-type-button editorElement layer-type-widget" href="#take-consultation" ><span>Рассчитать стоимость</span></a>
+				</div>
+			</div>
+
+			<div class="layout column layout_9" >
+
 				<div class="phones-9 widget-6 phones-block contacts-block widget-type-contacts_phone editorElement layer-type-widget">
 					<div class="inner">
 						<label class="cell-icon" for="tg-phones-9">
@@ -142,40 +147,39 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
 
-		<div class="email-14 widget-9 email-block contacts-block widget-type-contacts_email editorElement layer-type-widget">
+				<div class="email-14 widget-9 email-block contacts-block widget-type-contacts_email editorElement layer-type-widget">
 
-			<div class="inner">
-				<label class="cell-icon" for="tg-email-14">
-					<div class="icon instagram"></div>
-				</label>
-				<div class="block-body-drop">
-					<div class="cell-text">
-						<div class="title"><div class="align-elem">Email:</div></div>
-						<div class="text_body">
-							<div class="align-elem"><a href="https://www.instagram.com/kpd100zavod.ru/" target="blank">instagram.com/kpd100zavod.ru</a></div>
+					<div class="inner">
+						<label class="cell-icon" for="tg-email-14">
+							<div class="icon instagram"></div>
+						</label>
+						<div class="block-body-drop">
+							<div class="cell-text">
+								<div class="title"><div class="align-elem">Email:</div></div>
+								<div class="text_body">
+									<div class="align-elem"><a href="https://www.instagram.com/kpd100zavod.ru/" target="blank">instagram.com/kpd100zavod.ru</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="inner">
+						<label class="cell-icon" for="tg-email-14">
+							<div class="icon"></div>
+						</label>
+						<input id="tg-email-14" class="tgl-but" type="checkbox">
+						<div class="block-body-drop">
+							<div class="cell-text">
+								<div class="title"><div class="align-elem">Email:</div></div>
+								<div class="text_body">
+									<div class="align-elem"><a href="mailto:kpd100zavod@gmail.com">kpd100zavod@gmail.com</a></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="inner">
-				<label class="cell-icon" for="tg-email-14">
-					<div class="icon"></div>
-				</label>
-				<input id="tg-email-14" class="tgl-but" type="checkbox">
-				<div class="block-body-drop">
-					<div class="cell-text">
-						<div class="title"><div class="align-elem">Email:</div></div>
-						<div class="text_body">
-							<div class="align-elem"><a href="mailto:kpd100zavod@gmail.com">kpd100zavod@gmail.com</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 					
 	</div>
@@ -321,6 +325,51 @@
 			<p class="personal-data">Нажимая на кнопку, я даю свое согласие на обработку <br>персональных данных и соглашаюсь с условиями <br>политики конфиденциальности</p>
 		</div>
 	</form>
+
+	<div id="take-consultation" class="popup-window zoom-anim-dialog">
+
+		<div class="success">
+			<h4>Спасибо за заявку!</h4>
+			<p>В ближайшее время с вами свяжется наш специалист.</p>
+		</div>
+
+		<div class="layout column layout_20" >
+			<div class="form-20 widget-11 vertical_mode widget-type-form_adaptive editorElement layer-type-widget">
+				<div class="form__header"><div class="align-elem">Так же мы выполняем заказы на любые сложные железобетонные изделия</div></div>
+				<div class="form__text"><div class="align-elem">Узнать стоимость</div></div>
+				<div class="form__body" data-api-type="form" data-api-url="/my/s3/xapi/public/?method=form/postform&param[form_id]=6170303">
+					<form method="post">
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="КПД-100">
+						<input type="hidden" name="form_subject" value="Заявка на рассчет стоимости | КПД-100">
+						<!-- Hidden Required Fields -->
+						<div class="form-table">
+							<div class="form-tbody">
+								<div class="form-item-group group-text">
+									<div class="form-item form-text name">
+										<div class="form-item__body">
+											<input class="wm-input-default" placeholder="* Ваше имя: " name="Имя" type="text" maxlength="100" required />
+										</div>
+									</div>
+									<div class="form-item form-text phone">
+										<div class="form-item__body">
+											<input class="wm-input-default phone-number" placeholder="* Телефон: " name="Телефон" type="text" maxlength="100" required />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-tfoot">
+								<div class="form-item-group group-button">
+									<div class="form-submit"><div class="form-item__body"><button class="wm-input-default" type="submit"><span class="align-elem">Жду звонка</span></button></div></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 </div>
 

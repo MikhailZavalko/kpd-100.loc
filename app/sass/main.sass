@@ -16,6 +16,15 @@
 			width: 100%
 	.widget-16
 		width: 470px
+	.widget-5.big-button
+		padding: 20px 20px
+		width: 330px
+		font-size: 22px
+		margin-top: 20px
+		background-color: rgba(#ffae00, .2)
+		transition: $time
+		&:hover
+			background-color: #ffae00
 
 .title-page .block-14
 	margin: 0 0 auto 70px
@@ -127,20 +136,42 @@
 		width: 40px
 		height: 40px
 
+.title-page .form-20 .form__header
+	font-size: 16px
+.title-page .form-20 .form__text
+	font-size: 28px
+.title-page .form-20 .form__header
+	color: #000
+.title-page .form-20 .form__text
+	margin-bottom: 22px
+.title-page .form-20 .form-submit button
+	transition: .2s ease
+	&:hover
+		color: #000
+.title-page .form-20 .form-text input
+	color: #000
+	border: 3px solid rgba(255, 174, 0, 0.35)
+.title-page .form-20 .form-text input, .title-page .form-20 .form-text input, .title-page .form-20 .form-text input
+	&::placeholder
+		color: #000
+		font-weight: 500
+
+
 
 .popup-window
 	display: flex
 	max-width: 500px
 	margin: 0 auto
-	background: url(../img_wraper2.jpg) center no-repeat
-	background-size: cover
+	// background: url(../img_wraper2.jpg) center no-repeat
+	// background-size: cover
+	background-color: #fff
 	padding: 30px
 	position: relative
 	.mfp-close
 		position: absolute
 		right: 0
 		top: 0
-		color: #fff
+		color: #000
 		font-size: 25px
 		width: 30px
 		height: 30px
@@ -162,12 +193,12 @@
 		height: 50px
 		border-radius: 50%
 		border-style: solid
-		border-color: #ffae00 rgba( 198, 198, 198, 0.5 ) rgba( 198, 198, 198, 0.5 )
+		border-color: #ffae00 rgba(#fff,0.9) rgba(#fff,0.9)
 		border-width: 4px
 		animation: loading-spin .7s infinite linear
 	&::after
 		content: ''
-		background-color: rgba(#171626,.9)
+		background-color: rgba(#fff,.8)
 		border-radius: 5px
 		position: absolute
 		top: 0

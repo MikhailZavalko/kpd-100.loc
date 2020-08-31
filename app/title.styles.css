@@ -9185,19 +9185,12 @@ html.title-page{
 }
 .title-page .popover-wrap-11 .popover-body .form_calendar_interval label {
   box-sizing: border-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
 }
 .title-page .popover-wrap-11 .popover-body .form_calendar_interval .s3_form_subitem_title {
   box-sizing: border-box;
-  -webkit-flex-shrink: 0;
-  -moz-flex-shrink: 0;
   flex-shrink: 0;
   padding-left: 5px;
   padding-right: 5px;
