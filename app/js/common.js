@@ -30,7 +30,7 @@ $(window).on('load', function() {
 
 
 	/* FANCYBOX */
-	$(".fancybox").fancybox();
+	// $(".fancybox").fancybox();
 	/* FANCYBOX */
 
 

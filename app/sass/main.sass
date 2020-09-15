@@ -140,6 +140,8 @@
 	font-size: 16px
 .title-page .form-20 .form__text
 	font-size: 28px
+.title-page .form-20 .form__header .align-elem
+	color: #fff
 .title-page .form-20 .form__header
 	color: #000
 .title-page .form-20 .form__text
@@ -148,6 +150,10 @@
 	transition: .2s ease
 	&:hover
 		color: #000
+.title-page .form-20 .form-text input.wm-input-default
+	color: #fff
+.title-page .form-20 .form-text input.wm-input-default::placeholder
+	color: #fff
 .title-page .form-20 .form-text input
 	color: #000
 	border: 3px solid rgba(255, 174, 0, 0.35)
@@ -874,7 +880,65 @@ progress[value]::-webkit-progress-value
 				span
 					color: $yellow
 
+.video-gallery
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 40px
+	margin: 80px 0 120px 0
 
+.video-item
+	text-decoration: none
+	outline: none
+	.video-block
+		position: relative
+		min-height: 250px
+		background-size: cover
+		transition: .25s ease
+		&::after
+			content: '\f04b'
+			font-family: fontawesome
+			font-size: 52px
+			color: $yellow
+			transition: .25s ease
+			position: absolute
+			width: 40px
+			height: 65px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&::before
+			content: ''
+			width: 100%
+			height: 100%
+			transition: .25s ease
+			position: absolute
+			top: 0
+			left: 0
+			background: rgba(0,0,0,0.1)
+	&:hover
+		.video-block
+			&::after
+				color: #fff
+			&::before
+				background: rgba(0,0,0,0.3)
+	p
+		font-size: 20px
+		font-weight: 600
+		margin: 10px 0 0
+	span
+		font-size: 16px
+
+.open-video
+	max-width: 720px
+	margin: 0 auto
+	.mfp-close
+		color: #fff
+		font-size: 38px
+		position: absolute
+		right: -30px
+		top: -40px
+		width: 30px
+		height: 30px
 
 
 .d-none
