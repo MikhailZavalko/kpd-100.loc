@@ -11,14 +11,14 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<link rel="stylesheet" href="title.styles.css?v=2.11">
+	<link rel="stylesheet" href="title.styles.css?v=2.12">
 
 	<!-- CUSOM CSS CODE -->
-	<link rel="stylesheet" href="css/main.min.css?v=2.11">
+	<link rel="stylesheet" href="css/main.min.css?v=2.12">
 	<!-- CUSOM CSS CODE -->
 
 	<!-- CUSTOM JS CODE -->
-	<script type="text/javascript" src="js/scripts.min.js?v=2.10"></script>
+	<script type="text/javascript" src="js/scripts.min.js?v=2.12"></script>
 	<!-- CUSTOM JS CODE -->
 
 	<script src="adaptiveimage.js"></script>
@@ -82,8 +82,8 @@
 
 						<div class="menu-scroll">
 							<ul>
-								<li class="menu-item"><a href="index.html"><span class="menu-item-text">О заводе</span></a></li>
-								<li class="menu-item"><a href="houses.html"><span class="menu-item-text">Дома</span></a></li>
+								<li class="menu-item"><a href="/"><span class="menu-item-text">Дома</span></a></li>
+								<li class="menu-item"><a href="about.html"><span class="menu-item-text">О заводе</span></a></li>
 								<li class="menu-item"><a href="frames.html"><span class="menu-item-text">Коммерческая <br>недвижимость</span></a></li>
 								<li class="menu-item"><a href="dealers.html"><span class="menu-item-text">Дилерам</span></a></li>
 								<li class="menu-item"><a href="kontakty.html"><span class="menu-item-text">Контакты</span></a></li>
@@ -307,7 +307,7 @@
 								</div>
 
 								<div class="button-container">
-									<a class="open-form-button center-button" href="#take-people-house"><span>Заказать Одноэтажный дом с двускатной кровлей</span></a>
+									<a class="open-form-button center-button" href="#take-2_dbl_roof"><span>Заказать Одноэтажный дом с двускатной кровлей</span></a>
 								</div>
 
 							</div>
@@ -371,7 +371,7 @@
 								</div>
 
 								<div class="button-container">
-									<a class="open-form-button center-button" href="#take-people-house"><span>Заказать Одноэтажный дом с четырехскатной кровлей</span></a>
+									<a class="open-form-button center-button" href="#take-2_4th_roof"><span>Заказать Одноэтажный дом с четырехскатной кровлей</span></a>
 								</div>
 
 							</div>
@@ -547,7 +547,7 @@
 								</div>
 
 								<div class="button-container">
-									<a class="open-form-button center-button" href="#take-people-house"><span>Заказать "Народный" дом с двускатной кровлей</span></a>
+									<a class="open-form-button center-button" href="#take-people_dblroof-house"><span>Заказать "Народный" дом с двускатной кровлей</span></a>
 								</div>
 								
 							</div>
@@ -1152,7 +1152,53 @@
 			<!-- END Hidden Required Fields -->
 			<div class="inputs">
 				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
-				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input" type="text" name="email" placeholder="E-mail" required>
+			</div>
+			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
+			<div class="confirm">
+				<input class="checkbox" type="checkbox" checked required />
+				<p class="personal-data">Нажимая на кнопку, я даю свое согласие на обработку <br>персональных данных и соглашаюсь с условиями <br>политики конфиденциальности</p>
+			</div>
+		</form>
+
+
+
+		<form class="popup-form zoom-anim-dialog form white-bg" id="take-2_dbl_roof" onsubmit="">
+			<div class="success">
+				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
+			</div>
+			<p>Оставьте заявку на <br>Одноэтажный дом с двускатной кровлей <br>и наш менеджер свяжется с вами</p>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="КПД-100">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на Одноэтажный дом с двускатной кровлей">
+			<!-- END Hidden Required Fields -->
+			<div class="inputs">
+				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input" type="text" name="email" placeholder="E-mail" required>
+			</div>
+			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
+			<div class="confirm">
+				<input class="checkbox" type="checkbox" checked required />
+				<p class="personal-data">Нажимая на кнопку, я даю свое согласие на обработку <br>персональных данных и соглашаюсь с условиями <br>политики конфиденциальности</p>
+			</div>
+		</form>
+
+
+
+		<form class="popup-form zoom-anim-dialog form white-bg" id="take-2_4th_roof" onsubmit="">
+			<div class="success">
+				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
+			</div>
+			<p>Оставьте заявку на <br>Одноэтажный дом с четырехскатной кровлей <br>и наш менеджер свяжется с вами</p>
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="КПД-100">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на Одноэтажный дом с четырехскатной кровлей">
+			<!-- END Hidden Required Fields -->
+			<div class="inputs">
+				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
 				<input class="input" type="text" name="email" placeholder="E-mail" required>
 			</div>
 			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
@@ -1168,14 +1214,14 @@
 			<div class="success">
 				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
 			</div>
-			<p>Оставьте заявку на "Народный" дом <br>и наш менеджер свяжется с вами</p>
+			<p>Оставьте заявку на <br>"Народный" дом с односкатной кровлей <br>и наш менеджер свяжется с вами</p>
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="КПД-100">
-			<input type="hidden" name="form_subject" value="КПД-100 | заявка на 'Народный' дом">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на 'Народный' дом с односкатной кровлей">
 			<!-- END Hidden Required Fields -->
 			<div class="inputs">
 				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
-				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
 				<input class="input" type="text" name="email" placeholder="E-mail" required>
 			</div>
 			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
@@ -1187,18 +1233,18 @@
 
 
 
-		<form class="popup-form zoom-anim-dialog form white-bg" id="take-people-house" onsubmit="">
+		<form class="popup-form zoom-anim-dialog form white-bg" id="take-people_dblroof-house" onsubmit="">
 			<div class="success">
 				<p><span>Спасибо за заявку!<br><span>Наш менеджер свяжется с вами в течение рабочего дня!</span></span></p>
 			</div>
-			<p>Оставьте заявку на "Народный" дом <br>с односкатной крышей <br>и наш менеджер свяжется с вами</p>
+			<p>Оставьте заявку на <br>"Народный" дом с двускатной кровлей <br>и наш менеджер свяжется с вами</p>
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="КПД-100">
-			<input type="hidden" name="form_subject" value="КПД-100 | заявка на 'Народный' дом">
+			<input type="hidden" name="form_subject" value="КПД-100 | заявка на 'Народный' дом с двускатной кровлей">
 			<!-- END Hidden Required Fields -->
 			<div class="inputs">
 				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
-				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
 				<input class="input" type="text" name="email" placeholder="E-mail" required>
 			</div>
 			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
@@ -1221,7 +1267,7 @@
 			<!-- END Hidden Required Fields -->
 			<div class="inputs">
 				<input class="input" type="text" name="Имя" placeholder="Ваше имя" required>
-				<input class="input phone" id="phone" type="text" name="Телефон" placeholder="Номер телефона" required>
+				<input class="input phone" type="text" name="Телефон" placeholder="Номер телефона" required>
 				<input class="input" type="text" name="email" placeholder="E-mail" required>
 			</div>
 			<button class="button button-wline submit-button"><span>Оставить заявку</span></button>
