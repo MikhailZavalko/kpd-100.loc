@@ -3878,14 +3878,9 @@ html.title-page{
   background: linear-gradient(to left, rgba(0, 0, 0, 0.258824) 0%, rgba(0, 0, 0, 0) 100%);
 }
 .title-page .blocklist-23 .list {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: inherit;
-  -moz-justify-content: inherit;
-  justify-content: inherit;
+  justify-content: center;
   box-sizing: border-box;
 }
 .title-page .blocklist-23 .item-outer {
