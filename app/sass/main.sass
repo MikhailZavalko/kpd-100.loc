@@ -218,6 +218,12 @@
 		&::before, &::after
 			opacity: 1
 			visibility: visible
+	.form-20 .form__header .align-elem
+		color: #000000
+	.form-20 .form-text input.wm-input-default
+		color: #000000
+	.form-20 .form-text input.wm-input-default::placeholder
+		color: #000000
 
 .success
 	position: absolute
@@ -940,6 +946,19 @@ progress[value]::-webkit-progress-value
 		width: 30px
 		height: 30px
 
+.masonry
+	column-count: 3
+	column-gap: 25px
+	.item
+		display: inline-block
+		background: #fff
+		margin: 0 0 15px
+		width: 100%
+		box-sizing: border-box
+		overflow: hidden
+		outline: none
+		img
+			max-width: 100%
 
 .d-none
 	display: none

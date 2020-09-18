@@ -22,6 +22,6 @@
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
-    "npm-check-updates": "^7.1.0"
+    "npm-check-updates": "^9.0.1"
   }
 }
