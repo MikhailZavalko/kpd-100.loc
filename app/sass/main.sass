@@ -948,18 +948,34 @@ progress[value]::-webkit-progress-value
 		height: 30px
 
 .masonry
-	column-count: 3
-	column-gap: 25px
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 25px
 	.item
-		display: inline-block
-		background: #fff
-		margin: 0 0 15px
-		width: 100%
 		box-sizing: border-box
 		overflow: hidden
 		outline: none
+		position: relative
 		img
 			max-width: 100%
+		&.image
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: 10px
+				background: url("../photo.png") right 0px bottom 0px / auto auto no-repeat, url("../photo2.png") left 0px top 0px / auto auto no-repeat, url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiBpZD0iTGF5ZXJfMSIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gZmlsbD0iI2ZmZmZmZiIgcG9pbnRzPSI4MC4yLDUxLjYgNTEuNCw1MS42IDUxLjQsMjIuNiA0OC45LDIyLjYgNDguOSw1MS42IDE5LjksNTEuNiAxOS45LDU0LjEgNDguOSw1NC4xIDQ4LjksODMuMSAgIDUxLjQsODMuMSA1MS40LDU0LjEgODAuNCw1NC4xIDgwLjQsNTEuNiAiIGZpbGwtb3BhY2l0eT0iMSIgaWQ9InBvbHlnb24tMiIgdHlwZT0ic29saWRDb2xvciI+PC9wb2x5Z29uPjwvc3ZnPg==") left 50% top 50% / 80px no-repeat rgba(23, 22, 40, 0.5)
+				opacity: 0
+				transition: .25s ease
+			&:hover
+				&::before
+					opacity: 1
+
+.gallery-block
+	margin: 120px 0
 
 // .title-page a:active, .title-page a:hover
 // 	color: #ffae00
