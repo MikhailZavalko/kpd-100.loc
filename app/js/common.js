@@ -2,6 +2,17 @@ $(window).on('load', function () {
 
 
 
+	/* SLIDER ABOUT PAGE */
+	$('.image-slider').slick({
+		slidesToShow: 1,
+		arrows: true,
+		prevArrow: '<i class="fa fa-arrow-circle-left slick-arrow slick-prev" aria-hidden="true"></i>',
+		nextArrow: '<i class="fa fa-arrow-circle-right slick-arrow slick-next" aria-hidden="true"></i>',
+	});
+	/* SLIDER ABOUT PAGE */
+
+
+
 	/* MASK PHONE INPUT */
 	$('.phone, .phone-number').mask('+7(999) 999-99-99');
 	/* MASK PHONE INPUT */
@@ -26,12 +37,6 @@ $(window).on('load', function () {
 		$('.spoiler').css('display', 'block');
 	});
 	/* JS FOR SPOILER */
-
-
-
-	/* FANCYBOX */
-	// $(".fancybox").fancybox();
-	/* FANCYBOX */
 
 
 
@@ -105,39 +110,6 @@ $(window).on('load', function () {
 		}
 	});
 	/* MAGNIFIC POPUP */
-
-
-
-
-	/* MASONRY GALLERY */
-	// function resizeGridItem(item) {
-	// 	grid = document.getElementsByClassName("masonry")[0];
-	// 	rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
-	// 	rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-	// 	rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-	// 	item.style.gridRowEnd = "span " + rowSpan;
-	// }
-
-	// function resizeAllGridItems() {
-	// 	allItems = document.getElementsByClassName("item");
-	// 	for (x = 0; x < allItems.length; x++) {
-	// 		resizeGridItem(allItems[x]);
-	// 	}
-	// }
-
-	// function resizeInstance(instance) {
-	// 	item = instance.elements[0];
-	// 	resizeGridItem(item);
-	// }
-
-	// window.onload = resizeAllGridItems();
-	// window.addEventListener("resize", resizeAllGridItems);
-
-	// allItems = document.getElementsByClassName("item");
-	// for (x = 0; x < allItems.length; x++) {
-	// 	imagesLoaded(allItems[x], resizeInstance);
-	// }
-	/* MASONRY GALLERY */
 
 
 
