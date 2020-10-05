@@ -3,11 +3,15 @@ $(window).on('load', function () {
 
 
 	/* SLIDER ABOUT PAGE */
-	$('.image-slider').slick({
-		slidesToShow: 1,
-		arrows: true,
-		prevArrow: '<i class="fa fa-arrow-circle-left slick-arrow slick-prev" aria-hidden="true"></i>',
-		nextArrow: '<i class="fa fa-arrow-circle-right slick-arrow slick-next" aria-hidden="true"></i>',
+	$('.slider').owlCarousel({
+		items: 1,
+		loop: true,
+		nav: true,
+		navText: ['<i class="fa fa-arrow-circle-left"></i>', '<i class="fa fa-arrow-circle-right"></i>'],
+		autoplay: true,
+		autoplayTimeout: 4000,
+		autoplayHoverPause: true,
+		// responsiveClass: true,
 	});
 	/* SLIDER ABOUT PAGE */
 
@@ -21,6 +25,9 @@ $(window).on('load', function () {
 
 	/* FANCYBOX SETTINGS */
 	$('.fancybox').fancybox({
+		selector : '.owl-item:not(.cloned) a',
+  	// backFocus : false,
+		// hash : false,
 		loop: false,
 		thumbs: {
 			autoStart: true,
