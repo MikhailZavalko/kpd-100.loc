@@ -25,6 +25,14 @@ $(window).on('load', function () {
 
 	/* FANCYBOX SETTINGS */
 	$('.fancybox').fancybox({
+		loop: false,
+		thumbs: {
+			autoStart: true,
+			axis: 'x'
+		}
+	});
+
+	$('.slides').fancybox({
 		selector : '.owl-item:not(.cloned) a',
   	// backFocus : false,
 		// hash : false,

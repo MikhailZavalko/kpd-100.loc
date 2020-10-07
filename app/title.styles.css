@@ -7408,18 +7408,16 @@ html.title-page{
   margin: 5px 0 0;
   border: none;
   position: absolute;
-  top: 100%;
+  top: 54px;
   left: 0;
-  background: #171628;
+  background: rgba(23, 22, 40, 0.5);
   list-style: none;
   width: 250px;
   display: none;
   z-index: 10;
   box-sizing: border-box;
   text-align: left;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
 }
 .title-page .menu-6 .menu-scroll > ul ul > li {
   padding: 0;
@@ -7433,24 +7431,22 @@ html.title-page{
   border: none;
   cursor: pointer;
   display: block;
-  background: #1a192e;
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
+  background: none;
   border-radius: none;
   box-sizing: border-box;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 13px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.4;
   position: relative;
   font-family: Montserrat, sans-serif;
   font-style: normal;
   letter-spacing: 0;
   text-transform: none;
-  font-weight: 500;
 }
 .title-page .menu-6 .menu-scroll > ul ul > li > a:hover, .title-page .menu-6 .menu-scroll > ul ul > li > a.hover, .title-page .menu-6 .menu-scroll > ul ul > li > a.active {
-  text-decoration: underline;
+  text-decoration: none;
   color: #ffae00;
 }
 .title-page .menu-6 .menu-scroll > ul ul > li.delimiter {
