@@ -645,10 +645,13 @@ progress[value]::-webkit-progress-value
 	position: fixed
 	z-index: 10
 	right: 6%
-	bottom: 210px
 	width: 70px
 	height: 70px
 	outline: none
+	&.phone
+		bottom: 210px
+	&.instagram
+		display: none
 	path
 		fill: $yellow
 		transition: $time
@@ -1068,6 +1071,39 @@ progress[value]::-webkit-progress-value
 
 .d-none
 	display: none
+
+
+.title-page .blocklist-23 .item
+	margin: 20px 20px 60px 20px
+
+.tabs
+	.tab-content
+		.img-convert
+			background-size: cover!important
+			background-position: center!important
+
+.tabs
+	height: 100%
+	.tab-contents
+		position: relative
+	.tab-content
+		position: absolute
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		transition: $time
+		&.active
+			opacity: 1
+			visibility: visible
+	.tab-btns
+		position: absolute
+		bottom: 10px
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 7px
+
+.title-page .blocklist-23 .item
+	height: 383px
 
 
 
