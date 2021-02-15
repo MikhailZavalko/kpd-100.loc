@@ -648,6 +648,26 @@ progress[value]::-webkit-progress-value
 	width: 70px
 	height: 70px
 	outline: none
+	&.sticky-block
+		right: auto
+		left: 6%
+		bottom: 100px
+		width: 70px
+		height: 250px
+		.circle-phone
+			display: flex
+			flex-direction: column
+			border-radius: 10em
+			a
+				outline: none
+				&:not(:last-child)
+					margin-bottom: 10px
+		.circle
+			border-radius: 10em
+			&.first
+				animation: pin-block 2.5s linear 0s infinite normal
+			&.second
+				animation: pin-block 3s linear 0s infinite normal
 	&.phone
 		bottom: 210px
 	&.instagram
@@ -695,6 +715,14 @@ progress[value]::-webkit-progress-value
 	100%
 		opacity: 0
 		transform: scale(1.4)
+
+@keyframes pin-block
+	0%
+		opacity: .6
+		transform: scale(1)
+	100%
+		opacity: 0
+		transform: scale(1.15)
 
 .form
 	padding: 45px 50px 30px 50px
