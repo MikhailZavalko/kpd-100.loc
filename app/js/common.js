@@ -111,10 +111,6 @@ $(window).on('load', function () {
 			salesDep.geoObjects.add(depMarker);
 		}
 
-
-
-
-
 	})
 	/* YANDEX MAPS SETTINGS */
 
@@ -140,6 +136,11 @@ $(window).on('load', function () {
 				}
 			}
 		}
+	});
+
+	$(".take-info").on("click", function(e) {
+		e.preventDefault();
+		$("body").scrollTop(0);
 	});
 	/* MAGNIFIC POPUP */
 

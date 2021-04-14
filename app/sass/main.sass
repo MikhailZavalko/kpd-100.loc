@@ -111,6 +111,25 @@
 	background: #fff
 	padding: 30px
 	position: relative
+	.link-block
+		display: grid
+		grid-template-columns: auto
+		grid-auto-flow: column
+		margin-bottom: 45px
+		a
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-decoration: none
+			img
+				max-width: 70px
+			p
+				text-align: center
+				transition: $time
+				margin: 7px 0 0
+			&:hover
+				p
+					color: #ffae00
 	h3
 		font-size: 26px
 		text-align: left
@@ -535,6 +554,8 @@
 
 .title-page.houses-page
 	.houses-text-block
+		.roofing-cake-item
+			height: auto
 		.widget-5
 			width: auto
 			max-width: 370px
@@ -1132,6 +1153,8 @@ progress[value]::-webkit-progress-value
 
 .title-page .blocklist-23 .item
 	height: 383px
+
+
 
 
 
