@@ -111,6 +111,24 @@ $(window).on('load', function () {
 			salesDep.geoObjects.add(depMarker);
 		}
 
+
+		if (document.getElementById('map-sales-vdk')) {
+			var salesDep = new ymaps.Map("map-sales-vdk", {
+				center: [43.128444, 131.894897],
+				zoom: 16,
+				controls: ['zoomControl'],
+				behaviors: ["drag", "dblClickZoom"]
+			}),
+				depMarker = new ymaps.Placemark([43.128444, 131.894897], { hintContent: "г. Владивосток, Проспект Красного Знамени 30" },
+					{
+						iconLayout: "default#image",
+						iconImageHref: "img/marker_2.png",
+						iconImageSize: [430, 128],
+						iconImageOffset: [-22, -128]
+					});
+			salesDep.geoObjects.add(depMarker);
+		}
+
 	})
 	/* YANDEX MAPS SETTINGS */
 
