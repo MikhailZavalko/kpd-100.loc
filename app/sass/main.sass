@@ -325,6 +325,7 @@
 	display: flex
 	flex-direction: column
 	align-items: flex-start
+	margin: 8px 0 auto
 
 .title-page .block-13.description-head
 	padding: 70px 50px 0 50px
@@ -356,6 +357,8 @@
 .title-page.houses-page .widget-5.head-button
 	background: #ffae00
 	transition: .25s ease
+	&:not(:last-child)
+		margin-bottom: 10px
 	&:hover
 		background: rgba(255,174,0,.2)
 
@@ -886,6 +889,33 @@ progress[value]::-webkit-progress-value
 		&::before, &::after
 			opacity: 1
 			visibility: visible
+	&.choose-land
+		max-width: 600px
+		padding: 45px 25px
+		.choose-land-table
+			overflow: hidden
+			td,th
+				border: 1px solid #c9c9c9
+				padding: 7px
+				position: relative
+			tr
+				&.bdb
+					border-bottom: 10px solid #ffae00
+				th
+					background-color: #f2f2f2
+				td
+					&:first-child
+						max-width: 50px
+			td:hover::before
+				transition: .25s ease
+				background-color: #bbbbbb
+				content: ''
+				height: 100%
+				left: -5000px
+				position: absolute
+				top: 0
+				width: 10000px
+				z-index: -2
 
 @-webkit-keyframes loading-spin
 	from
@@ -1179,6 +1209,8 @@ progress[value]::-webkit-progress-value
 				&:hover
 					span
 						color: #000
+
+
 
 
 

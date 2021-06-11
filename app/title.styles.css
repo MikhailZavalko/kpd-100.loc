@@ -7844,7 +7844,8 @@ html.title-page{
   display: block;
   flex-direction: column;
   border-radius: none;
-  padding-top: 125px;
+  /*padding-top: 125px;*/
+  padding-top: 95px;
   padding-left: 25px;
 }
 .title-page .widget-8 {
@@ -8772,13 +8773,9 @@ html.title-page{
   font-family: Montserrat, sans-serif;
   color: #fff;
   text-decoration: none;
-  -webkit-justify-content: normal;
-  -moz-justify-content: normal;
   justify-content: normal;
   font-weight: 800;
   background: url("lozung_fitch.png") left 0px top 7px / auto auto no-repeat;
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
   border-radius: none;
   padding-left: 60px;
 }
