@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /wp-
+Disallow: *?s=
+Disallow: *?attachment_id=
+Disallow: */feed
+Disallow: /xmlrpc.php
+Disallow: */page/
+Allow: */uploads
+Allow: *.js
+Allow: *.css

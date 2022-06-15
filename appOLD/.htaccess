@@ -1,0 +1,15 @@
+#
+#
+#Options +FollowSymLinks
+#RewriteEngine On
+#
+#<IfModule mod_rewrite.c>
+#	# Redirect with WWW on without WWW
+#	RewriteCond %{HTTP_HOST} ^www\.(.*)$
+#	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+#
+#	# Delete index.html in the end
+#	RewriteCond %{REQUEST_URI} ^(.*)/index\.html$
+#	RewriteRule ^(.*)index\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
+#</IfModule>
+#
