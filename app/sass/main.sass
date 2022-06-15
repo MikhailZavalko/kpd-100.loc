@@ -181,10 +181,14 @@
 		color: #000
 		font-weight: 500
 
+
+
 .popup-window
 	display: flex
 	max-width: 500px
 	margin: 0 auto
+	// background: url(../img_wraper2.jpg) center no-repeat
+	// background-size: cover
 	background-color: #fff
 	padding: 30px
 	position: relative
@@ -272,13 +276,12 @@
 	&.visible
 		display: flex
 
-.title-page .block-6
-	background: url("../img/top-img.jpg") top no-repeat
+.title-page .block-6.houses-page-top
+	background: url("../img/houses-top-image.jpg") top no-repeat
 	background-size: cover
-	margin-top: 72px
 
 .block-19
-	padding: 50px 50px!important
+	padding: 70px 50px!important
 
 .widget-30
 	text-align: left!important
@@ -318,17 +321,11 @@
 .fancybox-button:hover
 	color: #fff!important
 
-.title-page .block-2
+.title-page .block-2.logo-descr
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	margin: 0 0 auto
-	height: 72px
-	justify-content: center
-	
-.title-page .site-name-3 img
-	height: 55px
-
+	margin: 8px 0 auto
 
 .title-page .block-13.description-head
 	padding: 70px 50px 0 50px
@@ -366,6 +363,8 @@
 		background: rgba(255,174,0,.2)
 
 .houses-page-top .send-mail
+	// padding: 3px
+	// background: rgba(#ffae00, .45)
 	display: inline-block
 	&:hover
 		color: #000
@@ -377,11 +376,6 @@
 .title-page .email-14 .icon.instagram
 	background: url("/img/instagram.png") left 50% top 50% / auto auto no-repeat
 
-.title-page
-	.block-3
-		text-align: left
-		margin-top: -72px
-
 .title-page.houses-page
 	.widget-2
 		display: inline-block
@@ -389,7 +383,6 @@
 		display: inline-block
 	.block-3
 		text-align: left
-		margin-top: -72px
 	.widget-8
 		margin: 41px 0 0
 	.widget-5
@@ -576,7 +569,7 @@
 progress[value]
 	border: none
 	width: 100%
-	height: 20px
+  height: 20px
 	background-color: #fff
 	position: relative
 	margin: 0 0 1.5em
@@ -606,7 +599,7 @@ progress[value]::progress-value:after
 	text-indent: -9999px
 
 p[data-value]
-	position: relative
+  position: relative
 
 p[data-value]:after
 	content: attr(data-value) '%'
@@ -675,9 +668,9 @@ progress[value]::-webkit-progress-value
 .sticky-button
 	position: fixed
 	z-index: 10
-	right: 26px
-	width: 56px
-	height: 56px
+	right: 6%
+	width: 70px
+	height: 70px
 	outline: none
 	&.sticky-block
 		right: auto
@@ -691,8 +684,6 @@ progress[value]::-webkit-progress-value
 			border-radius: 10em
 			a
 				outline: none
-				img
-					max-width: 28px
 				&:not(:last-child)
 					margin-bottom: 10px
 		.circle
@@ -702,7 +693,7 @@ progress[value]::-webkit-progress-value
 			&.second
 				animation: pin-block 3s linear 0s infinite normal
 	&.phone
-		bottom: 182px
+		bottom: 210px
 	&.instagram
 		display: none
 	path
@@ -1120,18 +1111,6 @@ progress[value]::-webkit-progress-value
 .title-page .blocklist-23 .slide .image
 	margin: 0 40px
 
-.title-page a.phones-9
-	background: #c63231
-	padding: 10px
-	.block-body-drop
-		.cell-text
-			.align-elem
-				text-align: center
-				div
-					text-align: center
-					span
-						color: #fff
-
 .slide
 	.image
 		box-sizing: border-box
@@ -1162,7 +1141,6 @@ progress[value]::-webkit-progress-value
 	display: grid
 	grid-template-columns: repeat(2, 1fr)
 	grid-gap: 40px
-	margin-top: 50px
 	.video-block
 		h2.next-h
 			font-size: 20px!important
@@ -1235,29 +1213,6 @@ progress[value]::-webkit-progress-value
 				&:hover
 					span
 						color: #000
-
-.social-networks
-	display: grid
-	grid-auto-flow: column
-	grid-gap: 15px
-	.social-link
-		width: 45px
-		height: 45px
-		border-radius: 10em
-		background: $yellow
-		display: flex
-		justify-content: center
-		align-items: center
-		svg path
-			transition: $time
-		&:hover
-			svg path
-				fill: #292929
-
-.b24-widget-button-position-bottom-right
-	right: 20px!important
-	bottom: 100px!important
-
 
 
 

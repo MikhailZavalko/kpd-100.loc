@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+Options +FollowSymLinks
+RewriteEngine On
+
+<IfModule mod_rewrite.c>
+
+	# Редирект домена с WWW на домен без WWW
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$
+	RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+	# 301 Redirect
+	Redirect 301 /index.html	https://vl-kpd100zavod.ru
+
+</IfModule>
+=======
 #
 #
 #Options +FollowSymLinks
@@ -13,3 +28,4 @@
 #	RewriteRule ^(.*)index\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
 #</IfModule>
 #
+>>>>>>> f67af46b68ea86f0c919f35d73045cf91d667ace
