@@ -9,7 +9,11 @@
   "author": "WebDesign Master",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "browser-sync": "^2.27.10",
+=======
+    "browser-sync": "^2.27.7",
+>>>>>>> b3f7baadd518c332d81564dac845542c39584920
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -17,13 +21,21 @@
     "gulp-notify": "^4.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-rsync": "0.0.9",
+<<<<<<< HEAD
     "gulp-sass": "^5.1.0",
+=======
+    "gulp-sass": "^5.0.0",
+>>>>>>> b3f7baadd518c332d81564dac845542c39584920
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "sass": "^1.52.3"
   },
   "dependencies": {
+<<<<<<< HEAD
     "gulp-v4": "^4.0.0-alpha.5",
     "npm-check-updates": "^13.1.4"
+=======
+    "npm-check-updates": "^12.0.2"
+>>>>>>> b3f7baadd518c332d81564dac845542c39584920
   }
 }
