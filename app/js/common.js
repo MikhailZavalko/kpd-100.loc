@@ -96,7 +96,7 @@ $(window).on('load', function () {
 
 		if (document.getElementById('map-sales')) {
 			var salesDep = new ymaps.Map("map-sales", {
-				center: [48.469724, 135.072081],
+				center: [43.128445, 131.894893],
 				zoom: 16,
 				controls: ['zoomControl'],
 				behaviors: ["drag", "dblClickZoom"]

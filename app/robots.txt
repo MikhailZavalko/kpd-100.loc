@@ -1,4 +1,19 @@
 User-agent: *
+Disallow: 
+Host: https://vl-kpd100zavod.ru/
+# WORDPRESS SECTION
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
+Disallow: /trackback
+Disallow: */trackback
+Disallow: */*/trackback
+Disallow: */*/feed/*/
+Disallow: */feed
+Disallow: /*?*
+Disallow: /tag
 Disallow: /wp-
 Disallow: *?s=
 Disallow: *?attachment_id=
@@ -8,3 +23,7 @@ Disallow: */page/
 Allow: */uploads
 Allow: *.js
 Allow: *.css
+#END  WORDPRESS SECTION
+Sitemap: https://vl-kpd100zavod.ru/sitemap.xml
+
+

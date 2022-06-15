@@ -18,8 +18,9 @@ $mail->Password = 'QWEasd123';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->setFrom('sendallmailrus@yandex.ru');
-$mail->addAddress('dev4@e2.group');
+$mail->addAddress('s.furs@list.ru');
 $mail->addAddress('hadesyara@gmail.com');
+$mail->addAddress('nikdv27@bk.ru');
 $method = $_SERVER['REQUEST_METHOD'];
 
 //Script Foreach
